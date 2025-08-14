@@ -1,0 +1,19 @@
+==================================================
+SEGMENT pseudo instruction
+==================================================
+
+.segment "ROM"
+.segment "ROM": zeropage
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_segment
+      (dot_keyword_segment)
+      name: (string)))
+ (source_line
+  inst: (pseudo_inst_segment
+      (dot_keyword_segment)
+      name: (string)
+      spec: (pseudo_inst_addr_spec))))

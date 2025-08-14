@@ -1,0 +1,25 @@
+==================================================
+ENUM pseudo instruction
+==================================================
+
+.enum levels
+    success = 0
+    warning
+    error
+.endenum
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_enum
+      (dot_keyword_enum)
+      name: (symbol)
+      field: (pseudo_inst_enum_field
+          name: (symbol)
+          value: (number))
+      field: (pseudo_inst_enum_field
+          name: (symbol))
+      field: (pseudo_inst_enum_field
+          name: (symbol))
+      (dot_keyword_endenum))))

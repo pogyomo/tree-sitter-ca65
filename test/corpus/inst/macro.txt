@@ -1,0 +1,22 @@
+==================================================
+macro instruction
+==================================================
+
+name 1, {,}, 1 + 2
+name 1, {,}, 1 + 2
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (macro_inst
+      name: (macro_inst_name)
+      arg: (macro_inst_arg_raw)
+      arg: (macro_inst_arg_enclosed)
+      arg: (macro_inst_arg_raw)))
+ (source_line
+  inst: (macro_inst
+      name: (macro_inst_name)
+      arg: (macro_inst_arg_raw)
+      arg: (macro_inst_arg_enclosed)
+      arg: (macro_inst_arg_raw))))

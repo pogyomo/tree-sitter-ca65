@@ -1,0 +1,13 @@
+==================================================
+ERROR pseudo instruction
+==================================================
+
+.out "message"
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_out
+      (dot_keyword_out)
+      message: (string))))

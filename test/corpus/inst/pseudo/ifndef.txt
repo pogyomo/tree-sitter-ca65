@@ -1,0 +1,13 @@
+==================================================
+IFNDEF pseudo instruction
+==================================================
+
+.ifndef sym
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_ifndef
+      (dot_keyword_ifndef)
+      symbol: (symbol))))

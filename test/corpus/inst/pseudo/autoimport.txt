@@ -1,0 +1,28 @@
+==================================================
+AUTOIMPORT pseudo instruction
+==================================================
+
+.autoimport +
+.autoimport -
+.autoimport on
+.autoimport off
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_autoimport
+      (dot_keyword_autoimport)
+      option: (pseudo_inst_on_off_option)))
+ (source_line
+  inst: (pseudo_inst_autoimport
+      (dot_keyword_autoimport)
+      option: (pseudo_inst_on_off_option)))
+ (source_line
+  inst: (pseudo_inst_autoimport
+      (dot_keyword_autoimport)
+      option: (pseudo_inst_on_off_option)))
+ (source_line
+  inst: (pseudo_inst_autoimport
+      (dot_keyword_autoimport)
+      option: (pseudo_inst_on_off_option))))

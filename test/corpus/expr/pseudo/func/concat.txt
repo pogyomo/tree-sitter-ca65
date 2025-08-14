@@ -1,0 +1,23 @@
+==================================================
+CONCAT pseudo function
+==================================================
+
+name = .concat("a")
+name = .concat("a", "b")
+
+--------------------------------------------------
+
+(source
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_concat
+          (dot_keyword_concat)
+          value: (string))))
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_concat
+          (dot_keyword_concat)
+          value: (string)
+          value: (string)))))

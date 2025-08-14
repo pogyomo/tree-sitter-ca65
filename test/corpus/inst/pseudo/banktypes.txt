@@ -1,0 +1,19 @@
+==================================================
+BANKBYPTES pseudo instruction
+==================================================
+
+.bankbytes $1
+.bankbytes $1, $2
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_bankbytes
+      (dot_keyword_bankbytes)
+      value: (number)))
+ (source_line
+  inst: (pseudo_inst_bankbytes
+      (dot_keyword_bankbytes)
+      value: (number)
+      value: (number))))

@@ -1,0 +1,17 @@
+==================================================
+LOWORD pseudo function
+==================================================
+
+name = .loword($10 + $20)
+
+--------------------------------------------------
+
+(source
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_loword
+          (dot_keyword_loword)
+          expr: (binary_expression
+              lhs: (number)
+              rhs: (number))))))

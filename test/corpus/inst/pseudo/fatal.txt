@@ -1,0 +1,13 @@
+==================================================
+FATAL pseudo instruction
+==================================================
+
+.fatal "message"
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_fatal
+      (dot_keyword_fatal)
+      message: (string))))

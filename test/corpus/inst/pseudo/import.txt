@@ -1,0 +1,23 @@
+==================================================
+IMPORT pseudo instruction
+==================================================
+
+.import sym
+.import sym1: zeropage, sym2
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_import
+      (dot_keyword_import)
+      symbol: (pseudo_inst_import_symbol
+          name: (symbol))))
+ (source_line
+  inst: (pseudo_inst_import
+      (dot_keyword_import)
+      symbol: (pseudo_inst_import_symbol
+          name: (symbol)
+          spec: (pseudo_inst_addr_spec))
+      symbol: (pseudo_inst_import_symbol
+          name: (symbol)))))

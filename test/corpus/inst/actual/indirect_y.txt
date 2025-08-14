@@ -1,0 +1,15 @@
+==================================================
+actual instruction of operand indirect y
+==================================================
+
+lda ($00), y
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (actual_inst
+      opcode: (opcode_lda)
+      operand: (operand_indirect_y
+          addr: (number)
+          reg: (register_y)))))

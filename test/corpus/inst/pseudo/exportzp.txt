@@ -1,0 +1,34 @@
+==================================================
+EXPORTZP pseudo instruction
+==================================================
+
+.exportzp sym
+.exportzp sym1 = $1000, sym2 = $2000
+.exportzp sym1 := $1000, sym2 := $2000
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_exportzp
+      (dot_keyword_exportzp)
+      symbol: (pseudo_inst_exportzp_symbol
+          name: (symbol))))
+ (source_line
+  inst: (pseudo_inst_exportzp
+      (dot_keyword_exportzp)
+      symbol: (pseudo_inst_exportzp_symbol
+          name: (symbol)
+          expr: (number))
+      symbol: (pseudo_inst_exportzp_symbol
+          name: (symbol)
+          expr: (number))))
+ (source_line
+  inst: (pseudo_inst_exportzp
+      (dot_keyword_exportzp)
+      symbol: (pseudo_inst_exportzp_symbol
+          name: (symbol)
+          expr: (number))
+      symbol: (pseudo_inst_exportzp_symbol
+          name: (symbol)
+          expr: (number)))))

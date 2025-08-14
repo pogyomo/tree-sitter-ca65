@@ -1,0 +1,19 @@
+==================================================
+CONSTRUCTOR pseudo instruction
+==================================================
+
+.constructor name
+.constructor name, 0
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_constructor
+      (dot_keyword_constructor)
+      name: (symbol)))
+ (source_line
+  inst: (pseudo_inst_constructor
+      (dot_keyword_constructor)
+      name: (symbol)
+      priority: (number))))

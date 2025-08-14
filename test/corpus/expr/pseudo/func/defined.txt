@@ -1,0 +1,15 @@
+==================================================
+DEFINED pseudo function
+==================================================
+
+name = .defined(name)
+
+--------------------------------------------------
+
+(source
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_defined
+          (dot_keyword_defined)
+          name: (symbol)))))

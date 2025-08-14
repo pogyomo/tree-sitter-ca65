@@ -1,0 +1,17 @@
+==================================================
+HIWORD pseudo function
+==================================================
+
+name = .hiword($10 + $20)
+
+--------------------------------------------------
+
+(source
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_hiword
+          (dot_keyword_hiword)
+          expr: (binary_expression
+              lhs: (number)
+              rhs: (number))))))

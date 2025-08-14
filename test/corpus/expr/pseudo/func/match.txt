@@ -1,0 +1,24 @@
+==================================================
+MATCH pseudo function
+==================================================
+
+name = .match(1 + 2, 1 + 2)
+name = .match({,}, {)})
+
+--------------------------------------------------
+
+(source
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_match
+          (dot_keyword_match)
+          lhs: (pseudo_func_match_lhs_raw)
+          rhs: (pseudo_func_match_rhs_raw))))
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_match
+          (dot_keyword_match)
+          lhs: (pseudo_func_match_lhs_enclosed)
+          rhs: (pseudo_func_match_rhs_enclosed)))))

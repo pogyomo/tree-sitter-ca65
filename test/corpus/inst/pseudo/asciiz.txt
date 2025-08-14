@@ -1,0 +1,13 @@
+==================================================
+ASCIIZ pseudo instruction
+==================================================
+
+.asciiz "string"
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_asciiz
+      (dot_keyword_asciiz)
+      value: (string))))

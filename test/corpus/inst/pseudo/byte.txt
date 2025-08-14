@@ -1,0 +1,30 @@
+==================================================
+BYTE pseudo instruction
+==================================================
+
+.byt $1
+.byt $1, $2
+.byte $1
+.byte $1, $2
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_byte
+      (dot_keyword_byte)
+      value: (number)))
+ (source_line
+  inst: (pseudo_inst_byte
+      (dot_keyword_byte)
+      value: (number)
+      value: (number)))
+ (source_line
+  inst: (pseudo_inst_byte
+      (dot_keyword_byte)
+      value: (number)))
+ (source_line
+  inst: (pseudo_inst_byte
+      (dot_keyword_byte)
+      value: (number)
+      value: (number))))

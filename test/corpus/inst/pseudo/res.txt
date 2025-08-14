@@ -1,0 +1,19 @@
+==================================================
+RES pseudo instruction
+==================================================
+
+.res $1
+.res $1, $2
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_res
+      (dot_keyword_res)
+      bytes: (number)))
+ (source_line
+  inst: (pseudo_inst_res
+      (dot_keyword_res)
+      bytes: (number)
+      fill: (number))))

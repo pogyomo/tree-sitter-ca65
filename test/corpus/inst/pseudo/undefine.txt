@@ -1,0 +1,13 @@
+==================================================
+UNDEFINE pseudo instruction
+==================================================
+
+.undefine state
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_undefine
+      (dot_keyword_undefine)
+      name: (symbol))))

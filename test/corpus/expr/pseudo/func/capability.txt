@@ -1,0 +1,38 @@
+==================================================
+CAPABILITY pseudo function
+==================================================
+
+name = .cap(cpu_has_bitimm)
+name = .cap(cpu_has_bitimm, cpu_has_brab)
+name = .capability(cpu_has_bitimm)
+name = .capability(cpu_has_bitimm, cpu_has_brab)
+
+--------------------------------------------------
+
+(source
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_capability
+          (dot_keyword_capability)
+          name: (pseudo_func_capability_name))))
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_capability
+          (dot_keyword_capability)
+          name: (pseudo_func_capability_name)
+          name: (pseudo_func_capability_name))))
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_capability
+          (dot_keyword_capability)
+          name: (pseudo_func_capability_name))))
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_capability
+          (dot_keyword_capability)
+          name: (pseudo_func_capability_name)
+          name: (pseudo_func_capability_name)))))

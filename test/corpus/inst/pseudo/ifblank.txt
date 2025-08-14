@@ -1,0 +1,17 @@
+==================================================
+IFBLANK pseudo instruction
+==================================================
+
+.ifblank
+.ifblank a + b
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_ifblank
+      (dot_keyword_ifblank)))
+ (source_line
+  inst: (pseudo_inst_ifblank
+      (dot_keyword_ifblank)
+      tokens: (pseudo_inst_ifblank_tokens))))

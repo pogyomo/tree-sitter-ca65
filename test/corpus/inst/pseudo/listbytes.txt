@@ -1,0 +1,18 @@
+==================================================
+LISTBYTES pseudo instruction
+==================================================
+
+.listbytes 12
+.listbytes unlimited
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_listbytes
+      (dot_keyword_listbytes)
+      bytes: (number)))
+ (source_line
+  inst: (pseudo_inst_listbytes
+      (dot_keyword_listbytes)
+      bytes: (pseudo_inst_unlimited))))

@@ -1,0 +1,21 @@
+==================================================
+SCOPE pseudo instruction
+==================================================
+
+.scope name
+.scope name: zeropage
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_scope
+      (dot_keyword_scope)
+      symbol: (pseudo_inst_scope_symbol
+          name: (symbol))))
+ (source_line
+  inst: (pseudo_inst_scope
+      (dot_keyword_scope)
+      symbol: (pseudo_inst_scope_symbol
+          name: (symbol)
+          spec: (pseudo_inst_addr_spec)))))

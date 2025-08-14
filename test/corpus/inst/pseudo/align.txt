@@ -1,0 +1,19 @@
+==================================================
+ALIGN pseudo instruction
+==================================================
+
+.align $1
+.align $1, $2
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_align
+      (dot_keyword_align)
+      align: (number)))
+ (source_line
+  inst: (pseudo_inst_align
+      (dot_keyword_align)
+      align: (number)
+      fill: (number))))

@@ -1,0 +1,19 @@
+==================================================
+LOBYTES pseudo instruction
+==================================================
+
+.lobytes $1
+.lobytes $1, $2
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_lobytes
+      (dot_keyword_lobytes)
+      value: (number)))
+ (source_line
+  inst: (pseudo_inst_lobytes
+      (dot_keyword_lobytes)
+      value: (number)
+      value: (number))))

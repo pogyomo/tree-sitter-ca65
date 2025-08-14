@@ -1,0 +1,14 @@
+==================================================
+CHARMAP pseudo instruction
+==================================================
+
+.charmap $41, $61
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_charmap
+      (dot_keyword_charmap)
+      src: (number)
+      dst: (number))))

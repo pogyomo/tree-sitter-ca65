@@ -1,0 +1,13 @@
+==================================================
+SETCPU pseudo instruction
+==================================================
+
+.setcpu "6502"
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_setcpu
+      (dot_keyword_setcpu)
+      cpu: (string))))

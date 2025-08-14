@@ -1,0 +1,28 @@
+==================================================
+CASE pseudo instruction
+==================================================
+
+.case +
+.case -
+.case on
+.case off
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_case
+      (dot_keyword_case)
+      option: (pseudo_inst_on_off_option)))
+ (source_line
+  inst: (pseudo_inst_case
+      (dot_keyword_case)
+      option: (pseudo_inst_on_off_option)))
+ (source_line
+  inst: (pseudo_inst_case
+      (dot_keyword_case)
+      option: (pseudo_inst_on_off_option)))
+ (source_line
+  inst: (pseudo_inst_case
+      (dot_keyword_case)
+      option: (pseudo_inst_on_off_option))))

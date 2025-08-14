@@ -1,0 +1,19 @@
+==================================================
+DESTRUCTOR pseudo instruction
+==================================================
+
+.destructor name
+.destructor name, 0
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_destructor
+      (dot_keyword_destructor)
+      name: (symbol)))
+ (source_line
+  inst: (pseudo_inst_destructor
+      (dot_keyword_destructor)
+      name: (symbol)
+      priority: (number))))

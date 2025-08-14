@@ -1,0 +1,39 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "ca65",
+      "camelcase": "CA65",
+      "title": "ca65",
+      "scope": "source.ca65",
+      "file-types": [
+        "ca65"
+      ],
+      "injection-regex": "^ca65$",
+      "class-name": "TreeSitterCa65"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "ca65 grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "pogyomo",
+        "email": "pogyomo@gmail.com"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/pogyomo/tree-sitter-ca65"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}

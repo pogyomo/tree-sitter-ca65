@@ -1,0 +1,18 @@
+==================================================
+LOCALCHAR pseudo instruction
+==================================================
+
+.localchar '?'
+.localchar '@'
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_localchar
+      (dot_keyword_localchar)
+      char: (char)))
+ (source_line
+  inst: (pseudo_inst_localchar
+      (dot_keyword_localchar)
+      char: (char))))

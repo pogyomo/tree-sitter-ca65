@@ -1,0 +1,18 @@
+==================================================
+DECMACRO pseudo instruction
+==================================================
+
+.delmac name
+.delmacro name
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_delmacro
+      (dot_keyword_delmacro)
+      name: (symbol)))
+ (source_line
+  inst: (pseudo_inst_delmacro
+      (dot_keyword_delmacro)
+      name: (symbol))))

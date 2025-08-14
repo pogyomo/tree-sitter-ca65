@@ -1,0 +1,15 @@
+==================================================
+DEFINEDMACRO pseudo function
+==================================================
+
+name = .definedmacro(name)
+
+--------------------------------------------------
+
+(source
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_definedmacro
+          (dot_keyword_definedmacro)
+          name: (symbol)))))

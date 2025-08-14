@@ -1,0 +1,19 @@
+==================================================
+REPEAT pseudo instruction
+==================================================
+
+.repeat $10
+.repeat $10, I
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_repeat
+      (dot_keyword_repeat)
+      count: (number)))
+ (source_line
+  inst: (pseudo_inst_repeat
+      (dot_keyword_repeat)
+      count: (number)
+      variable: (symbol))))

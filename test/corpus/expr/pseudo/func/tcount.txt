@@ -1,0 +1,22 @@
+==================================================
+TCOUNT pseudo function
+==================================================
+
+name = .tcount(1 + 2)
+name = .tcount({)})
+
+--------------------------------------------------
+
+(source
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_tcount
+          (dot_keyword_tcount)
+          tokens: (pseudo_func_tcount_tokens_raw))))
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_tcount
+          (dot_keyword_tcount)
+          tokens: (pseudo_func_tcount_tokens_enclosed)))))

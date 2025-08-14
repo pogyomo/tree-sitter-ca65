@@ -1,0 +1,12 @@
+==================================================
+IFPSWEET16 pseudo instruction
+==================================================
+
+.ifpsweet16
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_ifpsweet16
+      (dot_keyword_ifpsweet16))))

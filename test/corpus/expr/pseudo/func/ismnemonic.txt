@@ -1,0 +1,22 @@
+==================================================
+ISMNEMONIC pseudo function
+==================================================
+
+name = .ismnem(lda)
+name = .ismnemonic(lda)
+
+--------------------------------------------------
+
+(source
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_ismnemonic
+          (dot_keyword_ismnemonic)
+          name: (symbol))))
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_ismnemonic
+          (dot_keyword_ismnemonic)
+          name: (symbol)))))

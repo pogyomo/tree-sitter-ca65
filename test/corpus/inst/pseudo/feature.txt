@@ -1,0 +1,30 @@
+==================================================
+FEATURE pseudo instruction
+==================================================
+
+.feature at_in_identifiers
+.feature at_in_identifiers +
+.feature at_in_identifiers +, bracket_as_indirect
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_feature
+      (dot_keyword_feature)
+      item: (pseudo_inst_feature_item
+          name: (pseudo_inst_feature_name))))
+ (source_line
+  inst: (pseudo_inst_feature
+      (dot_keyword_feature)
+      item: (pseudo_inst_feature_item
+          name: (pseudo_inst_feature_name)
+          option: (pseudo_inst_on_off_option))))
+ (source_line
+  inst: (pseudo_inst_feature
+      (dot_keyword_feature)
+      item: (pseudo_inst_feature_item
+          name: (pseudo_inst_feature_name)
+          option: (pseudo_inst_on_off_option))
+      item: (pseudo_inst_feature_item
+          name: (pseudo_inst_feature_name)))))

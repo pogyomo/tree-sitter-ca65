@@ -1,0 +1,19 @@
+==================================================
+LOCAL pseudo instruction
+==================================================
+
+.local sym
+.local sym1, sym2
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_local
+      (dot_keyword_local)
+      symbol: (symbol)))
+ (source_line
+  inst: (pseudo_inst_local
+      (dot_keyword_local)
+      symbol: (symbol)
+      symbol: (symbol))))

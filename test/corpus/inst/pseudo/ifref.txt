@@ -1,0 +1,13 @@
+==================================================
+IFREF pseudo instruction
+==================================================
+
+.ifref sym
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_ifref
+      (dot_keyword_ifref)
+      symbol: (symbol))))

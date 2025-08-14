@@ -1,0 +1,14 @@
+==================================================
+actual instruction of operand a
+==================================================
+
+inc a
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (actual_inst
+      opcode: (opcode_inc)
+      operand: (operand_a
+          reg: (register_a)))))

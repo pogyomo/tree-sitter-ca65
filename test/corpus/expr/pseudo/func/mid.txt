@@ -1,0 +1,26 @@
+==================================================
+MID pseudo function
+==================================================
+
+name = .mid(1, 2, 1 + 2)
+name = .mid(1, 2, {)})
+
+--------------------------------------------------
+
+(source
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_mid
+          (dot_keyword_mid)
+          start: (number)
+          end: (number)
+          tokens: (pseudo_func_mid_tokens_raw))))
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_mid
+          (dot_keyword_mid)
+          start: (number)
+          end: (number)
+          tokens: (pseudo_func_mid_tokens_enclosed)))))

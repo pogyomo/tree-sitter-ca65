@@ -1,0 +1,12 @@
+==================================================
+ZEROPAGE pseudo instruction
+==================================================
+
+.zeropage
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_zeropage
+      (dot_keyword_zeropage))))

@@ -1,0 +1,26 @@
+==================================================
+ASSERT pseudo instruction
+==================================================
+
+.assert $1
+.assert $1, error
+.assert $1, error, "message"
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_assert
+      (dot_keyword_assert)
+      cond: (number)))
+ (source_line
+  inst: (pseudo_inst_assert
+      (dot_keyword_assert)
+      cond: (number)
+      action: (pseudo_inst_assert_action)))
+ (source_line
+  inst: (pseudo_inst_assert
+      (dot_keyword_assert)
+      cond: (number)
+      action: (pseudo_inst_assert_action)
+      message: (string))))

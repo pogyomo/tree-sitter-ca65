@@ -1,0 +1,12 @@
+==================================================
+ENDPROC pseudo instruction
+==================================================
+
+.endproc
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_endproc
+      (dot_keyword_endproc))))

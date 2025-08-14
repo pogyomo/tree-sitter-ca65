@@ -1,0 +1,15 @@
+==================================================
+BLANK pseudo function
+==================================================
+
+name = .blank($10 + $20)
+
+--------------------------------------------------
+
+(source
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_blank
+          (dot_keyword_blank)
+          tokens: (pseudo_func_blank_tokens)))))

@@ -1,0 +1,19 @@
+==================================================
+LITERAL pseudo instruction
+==================================================
+
+.literal $1
+.literal $1, "hello"
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_literal
+      (dot_keyword_literal)
+      value: (number)))
+ (source_line
+  inst: (pseudo_inst_literal
+      (dot_keyword_literal)
+      value: (number)
+      value: (string))))

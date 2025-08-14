@@ -1,0 +1,15 @@
+==================================================
+ADDRSIZE pseudo function
+==================================================
+
+name = .addrsize(name)
+
+--------------------------------------------------
+
+(source
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_addrsize
+          (dot_keyword_addrsize)
+          symbol: (symbol)))))

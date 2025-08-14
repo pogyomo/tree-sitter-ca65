@@ -1,0 +1,19 @@
+==================================================
+FARADDR pseudo instruction
+==================================================
+
+.faraddr $1
+.faraddr $1, $2
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_faraddr
+      (dot_keyword_faraddr)
+      value: (number)))
+ (source_line
+  inst: (pseudo_inst_faraddr
+      (dot_keyword_faraddr)
+      value: (number)
+      value: (number))))

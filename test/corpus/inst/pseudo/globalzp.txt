@@ -1,0 +1,19 @@
+==================================================
+GLOBALZP pseudo instruction
+==================================================
+
+.globalzp sym
+.globalzp sym1, sym2
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_globalzp
+      (dot_keyword_globalzp)
+      symbol: (symbol)))
+ (source_line
+  inst: (pseudo_inst_globalzp
+      (dot_keyword_globalzp)
+      symbol: (symbol)
+      symbol: (symbol))))

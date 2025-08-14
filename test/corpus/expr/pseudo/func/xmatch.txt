@@ -1,0 +1,24 @@
+==================================================
+XMATCH pseudo function
+==================================================
+
+name = .xmatch(1 + 2, 1 + 2)
+name = .xmatch({,}, {)})
+
+--------------------------------------------------
+
+(source
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_xmatch
+          (dot_keyword_xmatch)
+          lhs: (pseudo_func_xmatch_lhs_raw)
+          rhs: (pseudo_func_xmatch_rhs_raw))))
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_xmatch
+          (dot_keyword_xmatch)
+          lhs: (pseudo_func_xmatch_lhs_enclosed)
+          rhs: (pseudo_func_xmatch_rhs_enclosed)))))

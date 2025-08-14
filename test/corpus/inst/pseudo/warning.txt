@@ -1,0 +1,13 @@
+==================================================
+WARNING pseudo instruction
+==================================================
+
+.warning "message"
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_warning
+      (dot_keyword_warning)
+      message: (string))))

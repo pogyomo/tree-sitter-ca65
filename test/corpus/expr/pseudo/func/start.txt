@@ -1,0 +1,16 @@
+==================================================
+START pseudo function
+==================================================
+
+name = .start("message", 1)
+
+--------------------------------------------------
+
+(source
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_start
+          (dot_keyword_start)
+          string: (string)
+          offset: (number)))))

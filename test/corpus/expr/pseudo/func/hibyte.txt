@@ -1,0 +1,17 @@
+==================================================
+HIBYTE pseudo function
+==================================================
+
+name = .hibyte($10 + $20)
+
+--------------------------------------------------
+
+(source
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_hibyte
+          (dot_keyword_hibyte)
+          expr: (binary_expression
+              lhs: (number)
+              rhs: (number))))))

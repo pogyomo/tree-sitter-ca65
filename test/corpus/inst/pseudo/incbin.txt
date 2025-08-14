@@ -1,0 +1,26 @@
+==================================================
+INCBIN pseudo instruction
+==================================================
+
+.incbin "a.dat"
+.incbin "a.dat", $100
+.incbin "a.dat", $100, $200
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_incbin
+      (dot_keyword_incbin)
+      file: (string)))
+ (source_line
+  inst: (pseudo_inst_incbin
+      (dot_keyword_incbin)
+      file: (string)
+      offset: (number)))
+ (source_line
+  inst: (pseudo_inst_incbin
+      (dot_keyword_incbin)
+      file: (string)
+      offset: (number)
+      size: (number))))

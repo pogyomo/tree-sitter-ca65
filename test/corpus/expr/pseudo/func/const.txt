@@ -1,0 +1,17 @@
+==================================================
+CONST pseudo function
+==================================================
+
+name = .const(1 + 2)
+
+--------------------------------------------------
+
+(source
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_const
+          (dot_keyword_const)
+          expr: (binary_expression
+              lhs: (number)
+              rhs: (number))))))

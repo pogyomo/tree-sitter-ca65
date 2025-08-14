@@ -1,0 +1,18 @@
+==================================================
+PAGELENGTH pseudo instruction
+==================================================
+
+.pagelength 66
+.pagelength unlimited
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_pagelength
+      (dot_keyword_pagelength)
+      length: (number)))
+ (source_line
+  inst: (pseudo_inst_pagelength
+      (dot_keyword_pagelength)
+      length: (pseudo_inst_unlimited))))

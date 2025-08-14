@@ -1,0 +1,67 @@
+==================================================
+UNION pseudo instruction
+==================================================
+
+.union name
+    .org $1000
+    vec .struct vector
+        x .word
+        y .word
+    .endstruct
+    .union oneof
+        x .word
+        y .byte
+    .endunion
+    pointer .addr 2
+    state .tag state
+.endunion
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_union
+      (dot_keyword_union)
+      name: (symbol)
+      field: (pseudo_inst_struct_or_union_field
+          alloc: (pseudo_inst_struct_or_union_field_alloc_org
+              (dot_keyword_org)
+              offset: (number)))
+      field: (pseudo_inst_struct_or_union_field
+          name: (symbol)
+          alloc: (pseudo_inst_struct
+              (dot_keyword_struct)
+              name: (symbol)
+              field: (pseudo_inst_struct_or_union_field
+                  name: (symbol)
+                  alloc: (pseudo_inst_struct_or_union_field_alloc_word
+                      (dot_keyword_word)))
+              field: (pseudo_inst_struct_or_union_field
+                  name: (symbol)
+                  alloc: (pseudo_inst_struct_or_union_field_alloc_word
+                      (dot_keyword_word)))
+              (dot_keyword_endstruct)))
+      field: (pseudo_inst_struct_or_union_field
+          alloc: (pseudo_inst_union
+              (dot_keyword_union)
+              name: (symbol)
+              field: (pseudo_inst_struct_or_union_field
+                  name: (symbol)
+                  alloc: (pseudo_inst_struct_or_union_field_alloc_word
+                      (dot_keyword_word)))
+              field: (pseudo_inst_struct_or_union_field
+                  name: (symbol)
+                  alloc: (pseudo_inst_struct_or_union_field_alloc_byte
+                      (dot_keyword_byte)))
+              (dot_keyword_endunion)))
+      field: (pseudo_inst_struct_or_union_field
+          name: (symbol)
+          alloc: (pseudo_inst_struct_or_union_field_alloc_addr
+              (dot_keyword_addr)
+              size: (number)))
+      field: (pseudo_inst_struct_or_union_field
+          name: (symbol)
+          alloc: (pseudo_inst_struct_or_union_field_alloc_tag
+              (dot_keyword_tag)
+              name: (symbol)))
+      (dot_keyword_endunion))))

@@ -1,0 +1,21 @@
+==================================================
+CONDES pseudo instruction
+==================================================
+
+.condes name, constructor
+.condes name, constructor, 0
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_condes
+      (dot_keyword_condes)
+      name: (symbol)
+      type: (pseudo_inst_condes_type)))
+ (source_line
+  inst: (pseudo_inst_condes
+      (dot_keyword_condes)
+      name: (symbol)
+      type: (pseudo_inst_condes_type)
+      priority: (number))))

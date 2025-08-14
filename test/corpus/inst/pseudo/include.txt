@@ -1,0 +1,13 @@
+==================================================
+INCLUDE pseudo instruction
+==================================================
+
+.include "a.inc"
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_include
+      (dot_keyword_include)
+      file: (string))))

@@ -1,0 +1,28 @@
+==================================================
+SMART pseudo instruction
+==================================================
+
+.smart +
+.smart -
+.smart on
+.smart off
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_smart
+      (dot_keyword_smart)
+      option: (pseudo_inst_on_off_option)))
+ (source_line
+  inst: (pseudo_inst_smart
+      (dot_keyword_smart)
+      option: (pseudo_inst_on_off_option)))
+ (source_line
+  inst: (pseudo_inst_smart
+      (dot_keyword_smart)
+      option: (pseudo_inst_on_off_option)))
+ (source_line
+  inst: (pseudo_inst_smart
+      (dot_keyword_smart)
+      option: (pseudo_inst_on_off_option))))

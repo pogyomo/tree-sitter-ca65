@@ -1,0 +1,33 @@
+==================================================
+DEFINE pseudo instruction
+==================================================
+
+.define EMPTY
+.define EMPTY(x)
+.define MACRO value
+.define MACRO(x, y) x + y 
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_define
+      (dot_keyword_define)
+      name: (symbol)))
+ (source_line
+  inst: (pseudo_inst_define
+      (dot_keyword_define)
+      name: (symbol)
+      param: (symbol)))
+ (source_line
+  inst: (pseudo_inst_define
+      (dot_keyword_define)
+      name: (symbol)
+      body: (pseudo_inst_define_body)))
+ (source_line
+  inst: (pseudo_inst_define
+      (dot_keyword_define)
+      name: (symbol)
+      param: (symbol)
+      param: (symbol)
+      body: (pseudo_inst_define_body))))

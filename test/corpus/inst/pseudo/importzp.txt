@@ -1,0 +1,22 @@
+==================================================
+IMPORTZP pseudo instruction
+==================================================
+
+.importzp sym
+.importzp sym1, sym2
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_importzp
+      (dot_keyword_importzp)
+      symbol: (pseudo_inst_importzp_symbol
+          name: (symbol))))
+ (source_line
+  inst: (pseudo_inst_importzp
+      (dot_keyword_importzp)
+      symbol: (pseudo_inst_importzp_symbol
+          name: (symbol))
+      symbol: (pseudo_inst_importzp_symbol
+          name: (symbol)))))

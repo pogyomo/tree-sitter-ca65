@@ -1,0 +1,12 @@
+==================================================
+PUSHSEG pseudo instruction
+==================================================
+
+.pushseg
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_pushseg
+      (dot_keyword_pushseg))))

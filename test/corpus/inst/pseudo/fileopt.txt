@@ -1,0 +1,26 @@
+==================================================
+FILEOPT pseudo instruction
+==================================================
+
+.fileopt author, "author"
+.fileopt comment, "comment"
+.fileopt compiler, "compiler"
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_fileopt
+      (dot_keyword_fileopt)
+      name: (pseudo_inst_fileopt_name)
+      content: (string)))
+ (source_line
+  inst: (pseudo_inst_fileopt
+      (dot_keyword_fileopt)
+      name: (pseudo_inst_fileopt_name)
+      content: (string)))
+ (source_line
+  inst: (pseudo_inst_fileopt
+      (dot_keyword_fileopt)
+      name: (pseudo_inst_fileopt_name)
+      content: (string))))

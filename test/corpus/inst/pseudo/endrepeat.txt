@@ -1,0 +1,12 @@
+==================================================
+ENDREPEAT pseudo instruction
+==================================================
+
+.endrepeat
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_endrepeat
+      (dot_keyword_endrepeat))))

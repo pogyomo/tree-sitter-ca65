@@ -1,0 +1,14 @@
+==================================================
+actual instruction of operand addr
+==================================================
+
+lda $00
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (actual_inst
+      opcode: (opcode_lda)
+      operand: (operand_addr
+          addr: (number)))))

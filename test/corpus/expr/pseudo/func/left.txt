@@ -1,0 +1,24 @@
+==================================================
+LEFT pseudo function
+==================================================
+
+name = .left(1, 1 + 2)
+name = .left(1, {)})
+
+--------------------------------------------------
+
+(source
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_left
+          (dot_keyword_left)
+          count: (number)
+          tokens: (pseudo_func_left_tokens_raw))))
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_left
+          (dot_keyword_left)
+          count: (number)
+          tokens: (pseudo_func_left_tokens_enclosed)))))

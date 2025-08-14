@@ -1,0 +1,22 @@
+==================================================
+REFERENCED pseudo function
+==================================================
+
+name = .ref(name)
+name = .referenced(name)
+
+--------------------------------------------------
+
+(source
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_referenced
+          (dot_keyword_referenced)
+          symbol: (symbol))))
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_referenced
+          (dot_keyword_referenced)
+          symbol: (symbol)))))

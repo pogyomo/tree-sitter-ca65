@@ -1,0 +1,25 @@
+==================================================
+IDENT pseudo function
+==================================================
+
+name = .ident("hello")
+name = .ident(.concat("a", "b"))
+
+--------------------------------------------------
+
+(source
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_ident
+          (dot_keyword_ident)
+          expr: (string))))
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_ident
+          (dot_keyword_ident)
+          expr: (pseudo_func_concat
+              (dot_keyword_concat)
+              value: (string)
+              value: (string))))))

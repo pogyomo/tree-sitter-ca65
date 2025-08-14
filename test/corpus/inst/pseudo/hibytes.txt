@@ -1,0 +1,19 @@
+==================================================
+HIBYTES pseudo instruction
+==================================================
+
+.hibytes $1
+.hibytes $1, $2
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_hibytes
+      (dot_keyword_hibytes)
+      value: (number)))
+ (source_line
+  inst: (pseudo_inst_hibytes
+      (dot_keyword_hibytes)
+      value: (number)
+      value: (number))))

@@ -1,0 +1,16 @@
+==================================================
+EXITMACRO pseudo instruction
+==================================================
+
+.exitmac
+.exitmacro
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_exitmacro
+      (dot_keyword_exitmacro)))
+ (source_line
+  inst: (pseudo_inst_exitmacro
+      (dot_keyword_exitmacro))))

@@ -1,0 +1,15 @@
+==================================================
+BANK pseudo function
+==================================================
+
+name = .bank(name)
+
+--------------------------------------------------
+
+(source
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_bank
+          (dot_keyword_bank)
+          symbol: (symbol)))))

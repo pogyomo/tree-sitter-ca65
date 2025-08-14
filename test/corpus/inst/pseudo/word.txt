@@ -1,0 +1,19 @@
+==================================================
+WORD pseudo instruction
+==================================================
+
+.word $1
+.word $1, $2
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_word
+      (dot_keyword_word)
+      value: (number)))
+ (source_line
+  inst: (pseudo_inst_word
+      (dot_keyword_word)
+      value: (number)
+      value: (number))))

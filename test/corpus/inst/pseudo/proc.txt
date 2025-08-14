@@ -1,0 +1,21 @@
+==================================================
+PROC pseudo instruction
+==================================================
+
+.proc sym
+.proc sym: zeropage
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_proc
+      (dot_keyword_proc)
+      symbol: (pseudo_inst_proc_symbol
+          name: (symbol))))
+ (source_line
+  inst: (pseudo_inst_proc
+      (dot_keyword_proc)
+      symbol: (pseudo_inst_proc_symbol
+          name: (symbol)
+          spec: (pseudo_inst_addr_spec)))))

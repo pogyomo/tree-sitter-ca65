@@ -1,0 +1,19 @@
+==================================================
+DWORD pseudo instruction
+==================================================
+
+.dword $1
+.dword $1, $2
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_dword
+      (dot_keyword_dword)
+      value: (number)))
+ (source_line
+  inst: (pseudo_inst_dword
+      (dot_keyword_dword)
+      value: (number)
+      value: (number))))

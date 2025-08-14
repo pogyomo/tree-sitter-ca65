@@ -1,0 +1,28 @@
+==================================================
+MACPACK pseudo instruction
+==================================================
+
+.macpack atari
+.macpack cbm
+.macpack generic
+.macpack longbranch
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_macpack
+      (dot_keyword_macpack)
+      package: (pseudo_inst_macpack_package)))
+ (source_line
+  inst: (pseudo_inst_macpack
+      (dot_keyword_macpack)
+      package: (pseudo_inst_macpack_package)))
+ (source_line
+  inst: (pseudo_inst_macpack
+      (dot_keyword_macpack)
+      package: (pseudo_inst_macpack_package)))
+ (source_line
+  inst: (pseudo_inst_macpack
+      (dot_keyword_macpack)
+      package: (pseudo_inst_macpack_package))))

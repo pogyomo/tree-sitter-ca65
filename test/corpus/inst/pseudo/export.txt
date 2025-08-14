@@ -1,0 +1,42 @@
+==================================================
+EXPORT pseudo instruction
+==================================================
+
+.export sym
+.export sym: far
+.export sym1: far = $1000, sym2 = $2000
+.export sym1 := $1000, sym2 := $2000
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_export
+      (dot_keyword_export)
+      symbol: (pseudo_inst_export_symbol
+          name: (symbol))))
+ (source_line
+  inst: (pseudo_inst_export
+      (dot_keyword_export)
+      symbol: (pseudo_inst_export_symbol
+          name: (symbol)
+          spec: (pseudo_inst_addr_spec))))
+ (source_line
+  inst: (pseudo_inst_export
+      (dot_keyword_export)
+      symbol: (pseudo_inst_export_symbol
+          name: (symbol)
+          spec: (pseudo_inst_addr_spec)
+          expr: (number))
+      symbol: (pseudo_inst_export_symbol
+          name: (symbol)
+          expr: (number))))
+ (source_line
+  inst: (pseudo_inst_export
+      (dot_keyword_export)
+      symbol: (pseudo_inst_export_symbol
+          name: (symbol)
+          expr: (number))
+      symbol: (pseudo_inst_export_symbol
+          name: (symbol)
+          expr: (number)))))

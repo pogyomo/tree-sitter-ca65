@@ -1,0 +1,13 @@
+==================================================
+IFCONST pseudo instruction
+==================================================
+
+.ifconst $1
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_ifconst
+      (dot_keyword_ifconst)
+      expr: (number))))

@@ -1,0 +1,13 @@
+==================================================
+TAG pseudo instruction
+==================================================
+
+.tag state
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_tag
+      (dot_keyword_tag)
+      name: (symbol))))

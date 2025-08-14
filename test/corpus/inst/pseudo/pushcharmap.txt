@@ -1,0 +1,12 @@
+==================================================
+PUSHCHARMAP pseudo instruction
+==================================================
+
+.pushcharmap
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_pushcharmap
+      (dot_keyword_pushcharmap))))

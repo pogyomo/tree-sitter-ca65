@@ -1,0 +1,16 @@
+==================================================
+MAX pseudo function
+==================================================
+
+name = .max(1, 2)
+
+--------------------------------------------------
+
+(source
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_max
+          (dot_keyword_max)
+          lhs: (number)
+          rhs: (number)))))

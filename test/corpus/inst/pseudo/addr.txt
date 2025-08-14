@@ -1,0 +1,19 @@
+==================================================
+ADDR pseudo instruction
+==================================================
+
+.addr $1
+.addr $1, $2
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_addr
+      (dot_keyword_addr)
+      value: (number)))
+ (source_line
+  inst: (pseudo_inst_addr
+      (dot_keyword_addr)
+      value: (number)
+      value: (number))))

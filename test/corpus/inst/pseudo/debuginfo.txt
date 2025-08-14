@@ -1,0 +1,28 @@
+==================================================
+DEBUGINFO pseudo instruction
+==================================================
+
+.debuginfo +
+.debuginfo -
+.debuginfo on
+.debuginfo off
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_debuginfo
+      (dot_keyword_debuginfo)
+      option: (pseudo_inst_on_off_option)))
+ (source_line
+  inst: (pseudo_inst_debuginfo
+      (dot_keyword_debuginfo)
+      option: (pseudo_inst_on_off_option)))
+ (source_line
+  inst: (pseudo_inst_debuginfo
+      (dot_keyword_debuginfo)
+      option: (pseudo_inst_on_off_option)))
+ (source_line
+  inst: (pseudo_inst_debuginfo
+      (dot_keyword_debuginfo)
+      option: (pseudo_inst_on_off_option))))

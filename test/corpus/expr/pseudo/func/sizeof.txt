@@ -1,0 +1,33 @@
+==================================================
+SIZEOF pseudo function
+==================================================
+
+name = .sizeof(name)
+name = .sizeof(name::name::name)
+name = .sizeof(@name)
+
+--------------------------------------------------
+
+(source
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_sizeof
+          (dot_keyword_sizeof)
+          target: (symbol))))
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_sizeof
+          (dot_keyword_sizeof)
+          target: (member
+              src: (member
+                  src: (symbol)
+                  dst: (symbol))
+              dst: (symbol)))))
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_sizeof
+          (dot_keyword_sizeof)
+          target: (local_label_body)))))

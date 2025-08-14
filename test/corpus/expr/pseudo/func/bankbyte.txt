@@ -1,0 +1,17 @@
+==================================================
+BANKBYTE pseudo function
+==================================================
+
+name = .bankbyte($10 + $20)
+
+--------------------------------------------------
+
+(source
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_bankbyte
+          (dot_keyword_bankbyte)
+          expr: (binary_expression
+              lhs: (number)
+              rhs: (number))))))

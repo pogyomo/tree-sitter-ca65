@@ -1,0 +1,16 @@
+==================================================
+MIN pseudo function
+==================================================
+
+name = .min(1, 2)
+
+--------------------------------------------------
+
+(source
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_min
+          (dot_keyword_min)
+          lhs: (number)
+          rhs: (number)))))

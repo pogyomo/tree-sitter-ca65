@@ -1,0 +1,19 @@
+==================================================
+DBYT pseudo instruction
+==================================================
+
+.dbyt $1
+.dbyt $1, $2
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_dbyt
+      (dot_keyword_dbyt)
+      value: (number)))
+ (source_line
+  inst: (pseudo_inst_dbyt
+      (dot_keyword_dbyt)
+      value: (number)
+      value: (number))))

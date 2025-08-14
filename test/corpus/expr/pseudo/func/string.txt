@@ -1,0 +1,17 @@
+==================================================
+STRING pseudo function
+==================================================
+
+name = .string(1 + 2)
+
+--------------------------------------------------
+
+(source
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_string
+          (dot_keyword_string)
+          expr: (binary_expression
+              lhs: (number)
+              rhs: (number))))))

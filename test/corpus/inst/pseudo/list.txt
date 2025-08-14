@@ -1,0 +1,28 @@
+==================================================
+LIST pseudo instruction
+==================================================
+
+.list +
+.list -
+.list on
+.list off
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_list
+      (dot_keyword_list)
+      option: (pseudo_inst_on_off_option)))
+ (source_line
+  inst: (pseudo_inst_list
+      (dot_keyword_list)
+      option: (pseudo_inst_on_off_option)))
+ (source_line
+  inst: (pseudo_inst_list
+      (dot_keyword_list)
+      option: (pseudo_inst_on_off_option)))
+ (source_line
+  inst: (pseudo_inst_list
+      (dot_keyword_list)
+      option: (pseudo_inst_on_off_option))))

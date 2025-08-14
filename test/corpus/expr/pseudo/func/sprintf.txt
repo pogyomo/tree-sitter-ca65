@@ -1,0 +1,27 @@
+==================================================
+SPRINTF pseudo function
+==================================================
+
+name = .sprintf("message")
+name = .sprintf("%d + %d = %d", 10, 20, 10 + 20)
+
+--------------------------------------------------
+
+(source
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_sprintf
+          (dot_keyword_sprintf)
+          fmt: (string))))
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_sprintf
+          (dot_keyword_sprintf)
+          fmt: (string)
+          arg: (number)
+          arg: (number)
+          arg: (binary_expression
+              lhs: (number)
+              rhs: (number))))))

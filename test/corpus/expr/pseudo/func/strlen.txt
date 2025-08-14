@@ -1,0 +1,15 @@
+==================================================
+STRLEN pseudo function
+==================================================
+
+name = .strlen("string")
+
+--------------------------------------------------
+
+(source
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_strlen
+          (dot_keyword_strlen)
+          string: (string)))))

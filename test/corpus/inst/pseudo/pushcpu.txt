@@ -1,0 +1,12 @@
+==================================================
+PUSHCPU pseudo instruction
+==================================================
+
+.pushcpu
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_pushcpu
+      (dot_keyword_pushcpu))))

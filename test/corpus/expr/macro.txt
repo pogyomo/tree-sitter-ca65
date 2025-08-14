@@ -1,0 +1,32 @@
+==================================================
+macro call
+==================================================
+
+name = 1 + name 1, 2, 3 + 1
+name = 1 + name 1, 2, {3} + 1
+
+--------------------------------------------------
+
+(source
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (binary_expression
+          lhs: (number)
+          rhs: (macro_call
+              name: (macro_call_name)
+              arg: (macro_call_arg_raw)
+              arg: (macro_call_arg_raw)
+              arg: (macro_call_arg_raw)))))
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (binary_expression
+          lhs: (binary_expression
+              lhs: (number)
+              rhs: (macro_call
+                  name: (macro_call_name)
+                  arg: (macro_call_arg_raw)
+                  arg: (macro_call_arg_raw)
+                  arg: (macro_call_arg_enclosed)))
+          rhs: (number)))))

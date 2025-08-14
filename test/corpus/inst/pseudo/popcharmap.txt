@@ -1,0 +1,12 @@
+==================================================
+POPCHARMAP pseudo instruction
+==================================================
+
+.popcharmap
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_popcharmap
+      (dot_keyword_popcharmap))))

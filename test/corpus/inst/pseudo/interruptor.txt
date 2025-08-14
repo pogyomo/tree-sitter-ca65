@@ -1,0 +1,19 @@
+==================================================
+INTERRUPTOR pseudo instruction
+==================================================
+
+.interruptor name
+.interruptor name, 0
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_interruptor
+      (dot_keyword_interruptor)
+      name: (symbol)))
+ (source_line
+  inst: (pseudo_inst_interruptor
+      (dot_keyword_interruptor)
+      name: (symbol)
+      priority: (number))))

@@ -1,0 +1,18 @@
+==================================================
+REFERTO pseudo instruction
+==================================================
+
+.referto sym
+.refto sym
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_referto
+      (dot_keyword_referto)
+      symbol: (symbol)))
+ (source_line
+  inst: (pseudo_inst_referto
+      (dot_keyword_referto)
+      symbol: (symbol))))

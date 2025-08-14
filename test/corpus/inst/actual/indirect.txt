@@ -1,0 +1,14 @@
+==================================================
+actual instruction of operand indirect
+==================================================
+
+jmp ($1000)
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (actual_inst
+      opcode: (opcode_jmp)
+      operand: (operand_indirect
+          addr: (number)))))

@@ -1,0 +1,26 @@
+==================================================
+MACRO pseudo instruction
+==================================================
+
+.macro name
+.macro name param1
+.macro name param1, param2
+
+--------------------------------------------------
+
+(source
+ (source_line
+  inst: (pseudo_inst_macro
+      (dot_keyword_macro)
+      name: (symbol)))
+ (source_line
+  inst: (pseudo_inst_macro
+      (dot_keyword_macro)
+      name: (symbol)
+      param: (symbol)))
+ (source_line
+  inst: (pseudo_inst_macro
+      (dot_keyword_macro)
+      name: (symbol)
+      param: (symbol)
+      param: (symbol))))
