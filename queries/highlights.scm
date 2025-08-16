@@ -18,6 +18,17 @@
 (pseudo_inst_importzp_symbol
   name: (symbol) @label (#set! priority 200))
 
+(pseudo_inst_struct
+  (dot_keyword_struct)
+  name: (symbol) @type (#set! priority 200))
+(pseudo_inst_union
+  (dot_keyword_union)
+  name: (symbol) @type (#set! priority 200))
+(pseudo_inst_scope
+  (dot_keyword_scope)
+  symbol: (pseudo_inst_scope_symbol
+            name: (symbol) @module (#set! priority 200)))
+
 [
  (pseudo_inst_assert_action)
  (pseudo_inst_condes_type)
