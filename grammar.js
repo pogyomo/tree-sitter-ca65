@@ -324,9 +324,7 @@ module.exports = grammar({
         $.pseudo_inst_end,
         $.pseudo_inst_endif,
         $.pseudo_inst_endmacro,
-        $.pseudo_inst_endproc,
         $.pseudo_inst_endrepeat,
-        $.pseudo_inst_endscope,
         $.pseudo_inst_enum,
         $.pseudo_inst_error,
         $.pseudo_inst_exitmacro,
@@ -613,14 +611,8 @@ module.exports = grammar({
     // .endmacro
     pseudo_inst_endmacro: ($) => $.dot_keyword_endmacro,
 
-    // .endproc
-    pseudo_inst_endproc: ($) => $.dot_keyword_endproc,
-
     // .endrepeat
     pseudo_inst_endrepeat: ($) => $.dot_keyword_endrepeat,
-
-    // .endscope
-    pseudo_inst_endscope: ($) => $.dot_keyword_endscope,
 
     // .enum
     pseudo_inst_enum: ($) =>
@@ -1049,12 +1041,20 @@ module.exports = grammar({
 
     // .proc
     pseudo_inst_proc: ($) =>
-      seq($.dot_keyword_proc, field("symbol", $.pseudo_inst_proc_symbol)),
+      seq(
+        $.dot_keyword_proc,
+        field("symbol", $.pseudo_inst_proc_symbol),
+        token(prec(1, /\r?\n/)),
+        optional($._pseudo_inst_proc_lines),
+        $.dot_keyword_endproc,
+      ),
     pseudo_inst_proc_symbol: ($) =>
       seq(
         field("name", $.symbol),
         optional(seq(":", field("spec", $.pseudo_inst_addr_spec))),
       ),
+    _pseudo_inst_proc_lines: ($) =>
+      seq(field("line", $.source_line), optional($._pseudo_inst_proc_lines)),
 
     // .psc02
     pseudo_inst_psc02: ($) => $.dot_keyword_psc02,
@@ -1105,12 +1105,17 @@ module.exports = grammar({
       seq(
         $.dot_keyword_scope,
         optional(field("symbol", $.pseudo_inst_scope_symbol)),
+        token(prec(1, /\r?\n/)),
+        optional($._pseudo_inst_scope_lines),
+        $.dot_keyword_endscope,
       ),
     pseudo_inst_scope_symbol: ($) =>
       seq(
         field("name", $.symbol),
         optional(seq(":", field("spec", $.pseudo_inst_addr_spec))),
       ),
+    _pseudo_inst_scope_lines: ($) =>
+      seq(field("line", $.source_line), optional($._pseudo_inst_scope_lines)),
 
     // .segment
     pseudo_inst_segment: ($) =>

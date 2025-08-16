@@ -3,7 +3,12 @@ PROC pseudo instruction
 ==================================================
 
 .proc sym
+    lda #$00
+.endproc
+
 .proc sym: zeropage
+    lda #$00
+.endproc
 
 --------------------------------------------------
 
@@ -12,10 +17,22 @@ PROC pseudo instruction
   inst: (pseudo_inst_proc
       (dot_keyword_proc)
       symbol: (pseudo_inst_proc_symbol
-          name: (symbol))))
+          name: (symbol))
+      line: (source_line
+          inst: (actual_inst
+              opcode: (opcode_lda)
+              operand: (operand_imm
+                  expr: (number))))
+      (dot_keyword_endproc)))
  (source_line
   inst: (pseudo_inst_proc
       (dot_keyword_proc)
       symbol: (pseudo_inst_proc_symbol
           name: (symbol)
-          spec: (pseudo_inst_addr_spec)))))
+          spec: (pseudo_inst_addr_spec))
+      line: (source_line
+          inst: (actual_inst
+              opcode: (opcode_lda)
+              operand: (operand_imm
+                  expr: (number))))
+      (dot_keyword_endproc))))

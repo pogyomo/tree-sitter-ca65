@@ -9976,21 +9976,6 @@
     }
   },
   {
-    "type": "pseudo_inst_endproc",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "dot_keyword_endproc",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "pseudo_inst_endrepeat",
     "named": true,
     "fields": {},
@@ -10000,21 +9985,6 @@
       "types": [
         {
           "type": "dot_keyword_endrepeat",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "pseudo_inst_endscope",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "dot_keyword_endscope",
           "named": true
         }
       ]
@@ -14093,6 +14063,16 @@
     "type": "pseudo_inst_proc",
     "named": true,
     "fields": {
+      "line": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "source_line",
+            "named": true
+          }
+        ]
+      },
       "symbol": {
         "multiple": false,
         "required": true,
@@ -14105,9 +14085,13 @@
       }
     },
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "dot_keyword_endproc",
+          "named": true
+        },
         {
           "type": "dot_keyword_proc",
           "named": true
@@ -14843,6 +14827,16 @@
     "type": "pseudo_inst_scope",
     "named": true,
     "fields": {
+      "line": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "source_line",
+            "named": true
+          }
+        ]
+      },
       "symbol": {
         "multiple": false,
         "required": false,
@@ -14855,9 +14849,13 @@
       }
     },
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "dot_keyword_endscope",
+          "named": true
+        },
         {
           "type": "dot_keyword_scope",
           "named": true
@@ -17064,15 +17062,7 @@
             "named": true
           },
           {
-            "type": "pseudo_inst_endproc",
-            "named": true
-          },
-          {
             "type": "pseudo_inst_endrepeat",
-            "named": true
-          },
-          {
-            "type": "pseudo_inst_endscope",
             "named": true
           },
           {

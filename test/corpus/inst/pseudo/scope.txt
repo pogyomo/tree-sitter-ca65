@@ -3,23 +3,64 @@ SCOPE pseudo instruction
 ==================================================
 
 .scope
+    foo = 2
+    lda #foo
+.endscope
+
 .scope name
+    foo = 2
+    lda #foo
+.endscope
+
 .scope name: zeropage
+    foo = 2
+    lda #foo
+.endscope
 
 --------------------------------------------------
 
 (source
  (source_line
   inst: (pseudo_inst_scope
-      (dot_keyword_scope)))
+      (dot_keyword_scope)
+      line: (source_line
+          symbol: (symbol_eq
+              name: (symbol)
+              expr: (number)))
+      line: (source_line
+          inst: (actual_inst
+              opcode: (opcode_lda)
+              operand: (operand_imm
+                  expr: (symbol))))
+      (dot_keyword_endscope)))
  (source_line
   inst: (pseudo_inst_scope
       (dot_keyword_scope)
       symbol: (pseudo_inst_scope_symbol
-          name: (symbol))))
+          name: (symbol))
+      line: (source_line
+          symbol: (symbol_eq
+              name: (symbol)
+              expr: (number)))
+      line: (source_line
+          inst: (actual_inst
+              opcode: (opcode_lda)
+              operand: (operand_imm
+                  expr: (symbol))))
+      (dot_keyword_endscope)))
  (source_line
   inst: (pseudo_inst_scope
       (dot_keyword_scope)
       symbol: (pseudo_inst_scope_symbol
           name: (symbol)
-          spec: (pseudo_inst_addr_spec)))))
+          spec: (pseudo_inst_addr_spec))
+      line: (source_line
+          symbol: (symbol_eq
+              name: (symbol)
+              expr: (number)))
+      line: (source_line
+          inst: (actual_inst
+              opcode: (opcode_lda)
+              operand: (operand_imm
+                  expr: (symbol))))
+      (dot_keyword_endscope))))
