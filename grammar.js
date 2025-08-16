@@ -322,8 +322,6 @@ module.exports = grammar({
         $.pseudo_inst_else,
         $.pseudo_inst_elseif,
         $.pseudo_inst_end,
-        $.pseudo_inst_endif,
-        $.pseudo_inst_endrepeat,
         $.pseudo_inst_enum,
         $.pseudo_inst_error,
         $.pseudo_inst_exitmacro,
@@ -594,21 +592,8 @@ module.exports = grammar({
         optional(seq(",", $._pseudo_inst_dword_args)),
       ),
 
-    // .else
-    pseudo_inst_else: ($) => $.dot_keyword_else,
-
-    // .elseif
-    pseudo_inst_elseif: ($) =>
-      seq($.dot_keyword_elseif, field("cond", $._expression)),
-
     // .end
     pseudo_inst_end: ($) => $.dot_keyword_end,
-
-    // .endif
-    pseudo_inst_endif: ($) => $.dot_keyword_endif,
-
-    // .endrepeat
-    pseudo_inst_endrepeat: ($) => $.dot_keyword_endrepeat,
 
     // .enum
     pseudo_inst_enum: ($) =>
@@ -782,83 +767,153 @@ module.exports = grammar({
     // .i8
     pseudo_inst_i8: ($) => $.dot_keyword_i8,
 
+    // common rule after if-like pseudo instruction
+    _pseudo_inst_if_common: ($) =>
+      seq(
+        token(prec(1, /\r?\n/)),
+        optional(field("block", $.pseudo_inst_block)),
+        repeat(field("alt", choice($.pseudo_inst_else, $.pseudo_inst_elseif))),
+        $.dot_keyword_endif,
+      ),
+
+    // .else
+    pseudo_inst_else: ($) =>
+      prec.left(
+        seq(
+          $.dot_keyword_else,
+          token(prec(1, /\r?\n/)),
+          optional(field("block", $.pseudo_inst_block)),
+        ),
+      ),
+
+    // .elseif
+    pseudo_inst_elseif: ($) =>
+      prec.left(
+        seq(
+          $.dot_keyword_elseif,
+          field("cond", $._expression),
+          token(prec(1, /\r?\n/)),
+          optional(field("block", $.pseudo_inst_block)),
+        ),
+      ),
+
     // .if
-    pseudo_inst_if: ($) => seq($.dot_keyword_if, field("cond", $._expression)),
+    pseudo_inst_if: ($) =>
+      seq(
+        $.dot_keyword_if,
+        field("cond", $._expression),
+        $._pseudo_inst_if_common,
+      ),
 
     // .ifblank
     pseudo_inst_ifblank: ($) =>
       seq(
         $.dot_keyword_ifblank,
         field("tokens", optional($.pseudo_inst_ifblank_tokens)),
+        $._pseudo_inst_if_common,
       ),
     pseudo_inst_ifblank_tokens: (_) => token(prec(-1, /.*/)),
 
     // .ifconst
     pseudo_inst_ifconst: ($) =>
-      seq($.dot_keyword_ifconst, field("expr", $._expression)),
+      seq(
+        $.dot_keyword_ifconst,
+        field("expr", $._expression),
+        $._pseudo_inst_if_common,
+      ),
 
     // .ifdef
     pseudo_inst_ifdef: ($) =>
-      seq($.dot_keyword_ifdef, field("symbol", $.symbol)),
+      seq(
+        $.dot_keyword_ifdef,
+        field("symbol", $.symbol),
+        $._pseudo_inst_if_common,
+      ),
 
     // .ifnblank
     pseudo_inst_ifnblank: ($) =>
       seq(
         $.dot_keyword_ifnblank,
         field("tokens", optional($.pseudo_inst_ifnblank_tokens)),
+        $._pseudo_inst_if_common,
       ),
     pseudo_inst_ifnblank_tokens: (_) => token(prec(-1, /.*/)),
 
     // .ifndef
     pseudo_inst_ifndef: ($) =>
-      seq($.dot_keyword_ifndef, field("symbol", $.symbol)),
+      seq(
+        $.dot_keyword_ifndef,
+        field("symbol", $.symbol),
+        $._pseudo_inst_if_common,
+      ),
 
     // .ifnref
     pseudo_inst_ifnref: ($) =>
-      seq($.dot_keyword_ifnref, field("symbol", $.symbol)),
+      seq(
+        $.dot_keyword_ifnref,
+        field("symbol", $.symbol),
+        $._pseudo_inst_if_common,
+      ),
 
     // .ifp02
-    pseudo_inst_ifp02: ($) => $.dot_keyword_ifp02,
+    pseudo_inst_ifp02: ($) =>
+      seq($.dot_keyword_ifp02, $._pseudo_inst_if_common),
 
     // .ifp02x
-    pseudo_inst_ifp02x: ($) => $.dot_keyword_ifp02x,
+    pseudo_inst_ifp02x: ($) =>
+      seq($.dot_keyword_ifp02x, $._pseudo_inst_if_common),
 
     // .ifp45gs02
-    pseudo_inst_ifp45gs02: ($) => $.dot_keyword_ifp45gs02,
+    pseudo_inst_ifp45gs02: ($) =>
+      seq($.dot_keyword_ifp45gs02, $._pseudo_inst_if_common),
 
     // .ifp816
-    pseudo_inst_ifp816: ($) => $.dot_keyword_ifp816,
+    pseudo_inst_ifp816: ($) =>
+      seq($.dot_keyword_ifp816, $._pseudo_inst_if_common),
 
     // .ifp4510
-    pseudo_inst_ifp4510: ($) => $.dot_keyword_ifp4510,
+    pseudo_inst_ifp4510: ($) =>
+      seq($.dot_keyword_ifp4510, $._pseudo_inst_if_common),
 
     // .ifp6280
-    pseudo_inst_ifp6280: ($) => $.dot_keyword_ifp6280,
+    pseudo_inst_ifp6280: ($) =>
+      seq($.dot_keyword_ifp6280, $._pseudo_inst_if_common),
 
     // .ifpc02
-    pseudo_inst_ifpc02: ($) => $.dot_keyword_ifpc02,
+    pseudo_inst_ifpc02: ($) =>
+      seq($.dot_keyword_ifpc02, $._pseudo_inst_if_common),
 
     // .ifpce02
-    pseudo_inst_ifpce02: ($) => $.dot_keyword_ifpce02,
+    pseudo_inst_ifpce02: ($) =>
+      seq($.dot_keyword_ifpce02, $._pseudo_inst_if_common),
 
     // .ifpdtv
-    pseudo_inst_ifpdtv: ($) => $.dot_keyword_ifpdtv,
+    pseudo_inst_ifpdtv: ($) =>
+      seq($.dot_keyword_ifpdtv, $._pseudo_inst_if_common),
 
     // .ifpm740
-    pseudo_inst_ifpm740: ($) => $.dot_keyword_ifpm740,
+    pseudo_inst_ifpm740: ($) =>
+      seq($.dot_keyword_ifpm740, $._pseudo_inst_if_common),
 
     // .ifpsc02
-    pseudo_inst_ifpsc02: ($) => $.dot_keyword_ifpsc02,
+    pseudo_inst_ifpsc02: ($) =>
+      seq($.dot_keyword_ifpsc02, $._pseudo_inst_if_common),
 
     // .ifpsweet16
-    pseudo_inst_ifpsweet16: ($) => $.dot_keyword_ifpsweet16,
+    pseudo_inst_ifpsweet16: ($) =>
+      seq($.dot_keyword_ifpsweet16, $._pseudo_inst_if_common),
 
     // .ifref
     pseudo_inst_ifref: ($) =>
-      seq($.dot_keyword_ifref, field("symbol", $.symbol)),
+      seq(
+        $.dot_keyword_ifref,
+        field("symbol", $.symbol),
+        $._pseudo_inst_if_common,
+      ),
 
     // .ifpwc02
-    pseudo_inst_ifpwc02: ($) => $.dot_keyword_ifpwc02,
+    pseudo_inst_ifpwc02: ($) =>
+      seq($.dot_keyword_ifpwc02, $._pseudo_inst_if_common),
 
     // .import
     pseudo_inst_import: ($) =>
@@ -977,7 +1032,7 @@ module.exports = grammar({
         field("name", $.symbol),
         optional($._pseudo_inst_macro_params),
         token(prec(1, /\r?\n/)),
-        optional($._pseudo_inst_macro_lines),
+        optional(field("block", $.pseudo_inst_block)),
         $.dot_keyword_endmacro,
       ),
     _pseudo_inst_macro_params: ($) =>
@@ -985,8 +1040,6 @@ module.exports = grammar({
         field("param", $.symbol),
         optional(seq(",", $._pseudo_inst_macro_params)),
       ),
-    _pseudo_inst_macro_lines: ($) =>
-      seq(field("line", $.source_line), optional($._pseudo_inst_macro_lines)),
 
     // .org
     pseudo_inst_org: ($) => seq($.dot_keyword_org, field("pc", $._expression)),
@@ -1046,7 +1099,7 @@ module.exports = grammar({
         $.dot_keyword_proc,
         field("symbol", $.pseudo_inst_proc_symbol),
         token(prec(1, /\r?\n/)),
-        optional($._pseudo_inst_proc_lines),
+        optional(field("block", $.pseudo_inst_block)),
         $.dot_keyword_endproc,
       ),
     pseudo_inst_proc_symbol: ($) =>
@@ -1054,8 +1107,6 @@ module.exports = grammar({
         field("name", $.symbol),
         optional(seq(":", field("spec", $.pseudo_inst_addr_spec))),
       ),
-    _pseudo_inst_proc_lines: ($) =>
-      seq(field("line", $.source_line), optional($._pseudo_inst_proc_lines)),
 
     // .psc02
     pseudo_inst_psc02: ($) => $.dot_keyword_psc02,
@@ -1088,6 +1139,8 @@ module.exports = grammar({
         $.dot_keyword_repeat,
         field("count", $._expression),
         optional(seq(",", field("variable", $.symbol))),
+        optional(field("block", $.pseudo_inst_block)),
+        $.dot_keyword_endrepeat,
       ),
 
     // .res
@@ -1107,7 +1160,7 @@ module.exports = grammar({
         $.dot_keyword_scope,
         optional(field("symbol", $.pseudo_inst_scope_symbol)),
         token(prec(1, /\r?\n/)),
-        optional($._pseudo_inst_scope_lines),
+        optional(field("block", $.pseudo_inst_block)),
         $.dot_keyword_endscope,
       ),
     pseudo_inst_scope_symbol: ($) =>
@@ -1115,8 +1168,6 @@ module.exports = grammar({
         field("name", $.symbol),
         optional(seq(":", field("spec", $.pseudo_inst_addr_spec))),
       ),
-    _pseudo_inst_scope_lines: ($) =>
-      seq(field("line", $.source_line), optional($._pseudo_inst_scope_lines)),
 
     // .segment
     pseudo_inst_segment: ($) =>
@@ -1221,6 +1272,13 @@ module.exports = grammar({
       seq($.dot_keyword_tag, optional(field("name", $.symbol))),
     pseudo_inst_struct_or_union_field_alloc_org: ($) =>
       seq($.dot_keyword_org, optional(field("offset", $._expression))),
+
+    // Source lines inside block
+    pseudo_inst_block: ($) => $._pseudo_inst_block_lines,
+    _pseudo_inst_block_lines: ($) =>
+      prec.left(
+        seq(field("line", $.source_line), optional($._pseudo_inst_block_lines)),
+      ),
 
     // ON/OFF option
     pseudo_inst_on_off_option: (_) =>

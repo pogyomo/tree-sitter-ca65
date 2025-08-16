@@ -3,6 +3,10 @@ IFNREF pseudo instruction
 ==================================================
 
 .ifnref sym
+    .code
+.else
+    .code
+.endif
 
 --------------------------------------------------
 
@@ -10,4 +14,15 @@ IFNREF pseudo instruction
  (source_line
   inst: (pseudo_inst_ifnref
       (dot_keyword_ifnref)
-      symbol: (symbol))))
+      symbol: (symbol)
+      block: (pseudo_inst_block
+          line: (source_line
+              inst: (pseudo_inst_code
+                  (dot_keyword_code))))
+      alt: (pseudo_inst_else
+          (dot_keyword_else)
+          block: (pseudo_inst_block
+              line: (source_line
+                  inst: (pseudo_inst_code
+                      (dot_keyword_code)))))
+      (dot_keyword_endif))))

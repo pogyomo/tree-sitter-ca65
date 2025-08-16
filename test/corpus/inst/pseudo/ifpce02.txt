@@ -3,10 +3,25 @@ IFPCE02 pseudo instruction
 ==================================================
 
 .ifpce02
+    .code
+.else
+    .code
+.endif
 
 --------------------------------------------------
 
 (source
  (source_line
   inst: (pseudo_inst_ifpce02
-      (dot_keyword_ifpce02))))
+      (dot_keyword_ifpce02)
+      block: (pseudo_inst_block
+          line: (source_line
+              inst: (pseudo_inst_code
+                  (dot_keyword_code))))
+      alt: (pseudo_inst_else
+          (dot_keyword_else)
+          block: (pseudo_inst_block
+              line: (source_line
+                  inst: (pseudo_inst_code
+                      (dot_keyword_code)))))
+      (dot_keyword_endif))))

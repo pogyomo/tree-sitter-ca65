@@ -3,15 +3,46 @@ IFNBLANK pseudo instruction
 ==================================================
 
 .ifnblank
+    .code
+.else
+    .code
+.endif
+
 .ifnblank a + b
+    .code
+.else
+    .code
+.endif
 
 --------------------------------------------------
 
 (source
  (source_line
   inst: (pseudo_inst_ifnblank
-      (dot_keyword_ifnblank)))
+      (dot_keyword_ifnblank)
+      block: (pseudo_inst_block
+          line: (source_line
+              inst: (pseudo_inst_code
+                  (dot_keyword_code))))
+      alt: (pseudo_inst_else
+          (dot_keyword_else)
+          block: (pseudo_inst_block
+              line: (source_line
+                  inst: (pseudo_inst_code
+                      (dot_keyword_code)))))
+      (dot_keyword_endif)))
  (source_line
   inst: (pseudo_inst_ifnblank
       (dot_keyword_ifnblank)
-      tokens: (pseudo_inst_ifnblank_tokens))))
+      tokens: (pseudo_inst_ifnblank_tokens)
+      block: (pseudo_inst_block
+          line: (source_line
+              inst: (pseudo_inst_code
+                  (dot_keyword_code))))
+      alt: (pseudo_inst_else
+          (dot_keyword_else)
+          block: (pseudo_inst_block
+              line: (source_line
+                  inst: (pseudo_inst_code
+                      (dot_keyword_code)))))
+      (dot_keyword_endif))))

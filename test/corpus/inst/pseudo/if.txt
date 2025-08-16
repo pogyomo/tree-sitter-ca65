@@ -3,6 +3,12 @@ IF pseudo instruction
 ==================================================
 
 .if $1
+    .code
+.elseif $1
+    .code
+.else
+    .code
+.endif
 
 --------------------------------------------------
 
@@ -10,4 +16,22 @@ IF pseudo instruction
  (source_line
   inst: (pseudo_inst_if
       (dot_keyword_if)
-      cond: (number))))
+      cond: (number)
+      block: (pseudo_inst_block
+          line: (source_line
+              inst: (pseudo_inst_code
+                  (dot_keyword_code))))
+      alt: (pseudo_inst_elseif
+          (dot_keyword_elseif)
+          cond: (number)
+          block: (pseudo_inst_block
+              line: (source_line
+                  inst: (pseudo_inst_code
+                      (dot_keyword_code)))))
+      alt: (pseudo_inst_else
+          (dot_keyword_else)
+          block: (pseudo_inst_block
+              line: (source_line
+                  inst: (pseudo_inst_code
+                      (dot_keyword_code)))))
+      (dot_keyword_endif))))

@@ -3,7 +3,12 @@ REPEAT pseudo instruction
 ==================================================
 
 .repeat $10
+    .byte $00
+.endrepeat
+
 .repeat $10, I
+    .byte I
+.endrepeat
 
 --------------------------------------------------
 
@@ -11,9 +16,21 @@ REPEAT pseudo instruction
  (source_line
   inst: (pseudo_inst_repeat
       (dot_keyword_repeat)
-      count: (number)))
+      count: (number)
+      block: (pseudo_inst_block
+          line: (source_line
+              inst: (pseudo_inst_byte
+                  (dot_keyword_byte)
+                  value: (number))))
+      (dot_keyword_endrepeat)))
  (source_line
   inst: (pseudo_inst_repeat
       (dot_keyword_repeat)
       count: (number)
-      variable: (symbol))))
+      variable: (symbol)
+      block: (pseudo_inst_block
+          line: (source_line
+              inst: (pseudo_inst_byte
+                  (dot_keyword_byte)
+                  value: (symbol))))
+      (dot_keyword_endrepeat))))

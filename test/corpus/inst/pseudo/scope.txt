@@ -23,30 +23,32 @@ SCOPE pseudo instruction
  (source_line
   inst: (pseudo_inst_scope
       (dot_keyword_scope)
-      line: (source_line
-          symbol: (symbol_eq
-              name: (symbol)
-              expr: (number)))
-      line: (source_line
-          inst: (actual_inst
-              opcode: (opcode_lda)
-              operand: (operand_imm
-                  expr: (symbol))))
+      block: (pseudo_inst_block
+          line: (source_line
+              symbol: (symbol_eq
+                  name: (symbol)
+                  expr: (number)))
+          line: (source_line
+              inst: (actual_inst
+                  opcode: (opcode_lda)
+                  operand: (operand_imm
+                      expr: (symbol)))))
       (dot_keyword_endscope)))
  (source_line
   inst: (pseudo_inst_scope
       (dot_keyword_scope)
       symbol: (pseudo_inst_scope_symbol
           name: (symbol))
-      line: (source_line
-          symbol: (symbol_eq
-              name: (symbol)
-              expr: (number)))
-      line: (source_line
-          inst: (actual_inst
-              opcode: (opcode_lda)
-              operand: (operand_imm
-                  expr: (symbol))))
+      block: (pseudo_inst_block
+          line: (source_line
+              symbol: (symbol_eq
+                  name: (symbol)
+                  expr: (number)))
+          line: (source_line
+              inst: (actual_inst
+                  opcode: (opcode_lda)
+                  operand: (operand_imm
+                      expr: (symbol)))))
       (dot_keyword_endscope)))
  (source_line
   inst: (pseudo_inst_scope
@@ -54,13 +56,14 @@ SCOPE pseudo instruction
       symbol: (pseudo_inst_scope_symbol
           name: (symbol)
           spec: (pseudo_inst_addr_spec))
-      line: (source_line
-          symbol: (symbol_eq
-              name: (symbol)
-              expr: (number)))
-      line: (source_line
-          inst: (actual_inst
-              opcode: (opcode_lda)
-              operand: (operand_imm
-                  expr: (symbol))))
+      block: (pseudo_inst_block
+          line: (source_line
+              symbol: (symbol_eq
+                  name: (symbol)
+                  expr: (number)))
+          line: (source_line
+              inst: (actual_inst
+                  opcode: (opcode_lda)
+                  operand: (operand_imm
+                      expr: (symbol)))))
       (dot_keyword_endscope))))

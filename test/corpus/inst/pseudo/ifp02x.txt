@@ -3,10 +3,25 @@ IFP02X pseudo instruction
 ==================================================
 
 .ifp02x
+    .code
+.else
+    .code
+.endif
 
 --------------------------------------------------
 
 (source
  (source_line
   inst: (pseudo_inst_ifp02x
-      (dot_keyword_ifp02x))))
+      (dot_keyword_ifp02x)
+      block: (pseudo_inst_block
+          line: (source_line
+              inst: (pseudo_inst_code
+                  (dot_keyword_code))))
+      alt: (pseudo_inst_else
+          (dot_keyword_else)
+          block: (pseudo_inst_block
+              line: (source_line
+                  inst: (pseudo_inst_code
+                      (dot_keyword_code)))))
+      (dot_keyword_endif))))

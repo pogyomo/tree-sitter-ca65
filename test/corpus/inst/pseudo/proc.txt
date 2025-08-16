@@ -18,11 +18,12 @@ PROC pseudo instruction
       (dot_keyword_proc)
       symbol: (pseudo_inst_proc_symbol
           name: (symbol))
-      line: (source_line
-          inst: (actual_inst
-              opcode: (opcode_lda)
-              operand: (operand_imm
-                  expr: (number))))
+      block: (pseudo_inst_block
+          line: (source_line
+              inst: (actual_inst
+                  opcode: (opcode_lda)
+                  operand: (operand_imm
+                      expr: (number)))))
       (dot_keyword_endproc)))
  (source_line
   inst: (pseudo_inst_proc
@@ -30,9 +31,10 @@ PROC pseudo instruction
       symbol: (pseudo_inst_proc_symbol
           name: (symbol)
           spec: (pseudo_inst_addr_spec))
-      line: (source_line
-          inst: (actual_inst
-              opcode: (opcode_lda)
-              operand: (operand_imm
-                  expr: (number))))
+      block: (pseudo_inst_block
+          line: (source_line
+              inst: (actual_inst
+                  opcode: (opcode_lda)
+                  operand: (operand_imm
+                      expr: (number)))))
       (dot_keyword_endproc))))
