@@ -15,6 +15,7 @@
  (dot_keyword_endstruct)
  (dot_keyword_endunion)
  (dot_keyword_endproc)
+ (dot_keyword_endmacro)
  (dot_keyword_endscope)
 ] @indent.end
 
