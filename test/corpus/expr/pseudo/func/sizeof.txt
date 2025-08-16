@@ -30,4 +30,4 @@ name = .sizeof(@name)
       name: (symbol)
       expr: (pseudo_func_sizeof
           (dot_keyword_sizeof)
-          target: (local_label_body)))))
+          target: (local_label_literal)))))

@@ -19050,6 +19050,22 @@
             "type": "SYMBOL",
             "name": "macro_call"
           }
+        },
+        {
+          "type": "PREC",
+          "value": 8,
+          "content": {
+            "type": "SYMBOL",
+            "name": "local_label_literal"
+          }
+        },
+        {
+          "type": "PREC",
+          "value": 8,
+          "content": {
+            "type": "SYMBOL",
+            "name": "unnamed_label_literal"
+          }
         }
       ]
     },
@@ -20251,7 +20267,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "local_label_body"
+                "name": "local_label_literal"
               },
               {
                 "type": "SYMBOL",
@@ -21781,6 +21797,93 @@
             "type": "SYMBOL",
             "name": "symbol"
           }
+        }
+      ]
+    },
+    "local_label_literal": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "@"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_identifier"
+        }
+      ]
+    },
+    "unnamed_label_literal": {
+      "type": "PREC_LEFT",
+      "value": 0,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "STRING",
+            "value": ":"
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_unnamed_label_literal_inc"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_unnamed_label_literal_dec"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "_unnamed_label_literal_inc": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "IMMEDIATE_TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "+"
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_unnamed_label_literal_inc"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "_unnamed_label_literal_dec": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "IMMEDIATE_TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "-"
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_unnamed_label_literal_dec"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         }
       ]
     },

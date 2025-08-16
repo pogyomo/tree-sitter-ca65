@@ -50,6 +50,8 @@ const PREC = {
     CHAR: 8,
     MEMBER: 8,
     MACRO_CALL: 8,
+    LOCAL_LABEL: 8,
+    UNNAMED_LABEL: 8,
   },
 };
 
@@ -1312,6 +1314,8 @@ module.exports = grammar({
         { rule: $.char, prec: PREC.PRIMARY.CHAR },
         { rule: $.member, prec: PREC.PRIMARY.MEMBER },
         { rule: $.macro_call, prec: PREC.PRIMARY.MACRO_CALL },
+        { rule: $.local_label_literal, prec: PREC.PRIMARY.LOCAL_LABEL },
+        { rule: $.unnamed_label_literal, prec: PREC.PRIMARY.UNNAMED_LABEL },
       ];
       return choice(
         ...table.map((item) => {
@@ -1571,7 +1575,7 @@ module.exports = grammar({
       seq(
         $.dot_keyword_sizeof,
         "(",
-        field("target", choice($.symbol, $.local_label_body, $.member)),
+        field("target", choice($.symbol, $.local_label_literal, $.member)),
         ")",
       ),
 
@@ -1857,6 +1861,18 @@ module.exports = grammar({
         "::",
         field("dst", $.symbol),
       ),
+    local_label_literal: ($) => seq("@", $._identifier),
+    unnamed_label_literal: ($) =>
+      prec.left(
+        seq(
+          ":",
+          choice($._unnamed_label_literal_inc, $._unnamed_label_literal_dec),
+        ),
+      ),
+    _unnamed_label_literal_inc: ($) =>
+      seq(token.immediate("+"), optional($._unnamed_label_literal_inc)),
+    _unnamed_label_literal_dec: ($) =>
+      seq(token.immediate("-"), optional($._unnamed_label_literal_dec)),
 
     // Identifier
     _identifier: (_) => /[a-zA-Z_][0-9a-zA-Z_]*/,

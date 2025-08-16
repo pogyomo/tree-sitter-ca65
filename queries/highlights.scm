@@ -2,6 +2,8 @@
  (label_body)
  (local_label_body)
 ] @label
+((local_label_literal) @label (#set! priority 200))
+((unnamed_label_literal) @label (#set! priority 200))
 
 (pseudo_inst_proc_symbol
   name: (symbol) @label (#set! priority 200))
