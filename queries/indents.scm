@@ -9,6 +9,8 @@
    (dot_keyword_macro))
  (pseudo_inst_scope
    (dot_keyword_scope))
+ (pseudo_inst_enum
+   (dot_keyword_enum))
 ] @indent.begin
 
 [
@@ -17,6 +19,7 @@
  (dot_keyword_endproc)
  (dot_keyword_endmacro)
  (dot_keyword_endscope)
+ (dot_keyword_endenum)
 ] @indent.end
 
 ((source_line) @indent.align
