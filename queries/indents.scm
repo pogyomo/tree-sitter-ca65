@@ -18,4 +18,16 @@
  (dot_keyword_endscope)
 ] @indent.end
 
-(source_line) @indent.dedent
+((source_line) @indent.align
+               (#set! indent.increment 0))
+
+(ERROR
+  (dot_keyword_struct)) @indent.auto
+(ERROR
+  (dot_keyword_union)) @indent.auto
+(ERROR
+  (dot_keyword_proc)) @indent.auto
+(ERROR
+  (dot_keyword_macro)) @indent.auto
+(ERROR
+  (dot_keyword_scope)) @indent.auto
