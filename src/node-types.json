@@ -14845,7 +14845,7 @@
     "fields": {
       "symbol": {
         "multiple": false,
-        "required": true,
+        "required": false,
         "types": [
           {
             "type": "pseudo_inst_scope_symbol",

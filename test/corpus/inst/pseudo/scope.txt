@@ -2,12 +2,16 @@
 SCOPE pseudo instruction
 ==================================================
 
+.scope
 .scope name
 .scope name: zeropage
 
 --------------------------------------------------
 
 (source
+ (source_line
+  inst: (pseudo_inst_scope
+      (dot_keyword_scope)))
  (source_line
   inst: (pseudo_inst_scope
       (dot_keyword_scope)

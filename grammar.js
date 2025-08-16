@@ -1102,7 +1102,10 @@ module.exports = grammar({
 
     // .scope
     pseudo_inst_scope: ($) =>
-      seq($.dot_keyword_scope, field("symbol", $.pseudo_inst_scope_symbol)),
+      seq(
+        $.dot_keyword_scope,
+        optional(field("symbol", $.pseudo_inst_scope_symbol)),
+      ),
     pseudo_inst_scope_symbol: ($) =>
       seq(
         field("name", $.symbol),
