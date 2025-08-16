@@ -13955,10 +13955,6 @@
         },
         {
           "type": "SYMBOL",
-          "name": "pseudo_inst_endmacro"
-        },
-        {
-          "type": "SYMBOL",
           "name": "pseudo_inst_endrepeat"
         },
         {
@@ -15169,10 +15165,6 @@
     "pseudo_inst_endif": {
       "type": "SYMBOL",
       "name": "dot_keyword_endif"
-    },
-    "pseudo_inst_endmacro": {
-      "type": "SYMBOL",
-      "name": "dot_keyword_endmacro"
     },
     "pseudo_inst_endrepeat": {
       "type": "SYMBOL",
@@ -16869,6 +16861,33 @@
               "type": "BLANK"
             }
           ]
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "PREC",
+            "value": 1,
+            "content": {
+              "type": "PATTERN",
+              "value": "\\r?\\n"
+            }
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_pseudo_inst_macro_lines"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "dot_keyword_endmacro"
         }
       ]
     },
@@ -16898,6 +16917,31 @@
                   "name": "_pseudo_inst_macro_params"
                 }
               ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "_pseudo_inst_macro_lines": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "FIELD",
+          "name": "line",
+          "content": {
+            "type": "SYMBOL",
+            "name": "source_line"
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_pseudo_inst_macro_lines"
             },
             {
               "type": "BLANK"

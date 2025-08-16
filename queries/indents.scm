@@ -1,18 +1,14 @@
 [
 (pseudo_inst_struct
-  (dot_keyword_struct)
-  name: (symbol))
+  (dot_keyword_struct))
 (pseudo_inst_union
-  (dot_keyword_union)
-  name: (symbol))
+  (dot_keyword_union))
 (pseudo_inst_proc
-  (dot_keyword_proc)
-  symbol: (_))
+  (dot_keyword_proc))
+(pseudo_inst_macro
+  (dot_keyword_macro))
 (pseudo_inst_scope
   (dot_keyword_scope))
-(pseudo_inst_scope
-  (dot_keyword_scope)
-  symbol: (_))
 ] @indent.begin
 
 [

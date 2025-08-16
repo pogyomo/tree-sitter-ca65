@@ -3,8 +3,16 @@ MACRO pseudo instruction
 ==================================================
 
 .macro name
+    lda #$00
+.endmacro
+
 .macro name param1
+    lda #$00
+.endmacro
+
 .macro name param1, param2
+    lda #$00
+.endmacro
 
 --------------------------------------------------
 
@@ -12,15 +20,33 @@ MACRO pseudo instruction
  (source_line
   inst: (pseudo_inst_macro
       (dot_keyword_macro)
-      name: (symbol)))
- (source_line
-  inst: (pseudo_inst_macro
-      (dot_keyword_macro)
       name: (symbol)
-      param: (symbol)))
+      line: (source_line
+          inst: (actual_inst
+              opcode: (opcode_lda)
+              operand: (operand_imm
+                  expr: (number))))
+      (dot_keyword_endmacro)))
  (source_line
   inst: (pseudo_inst_macro
       (dot_keyword_macro)
       name: (symbol)
       param: (symbol)
-      param: (symbol))))
+      line: (source_line
+          inst: (actual_inst
+              opcode: (opcode_lda)
+              operand: (operand_imm
+                  expr: (number))))
+      (dot_keyword_endmacro)))
+ (source_line
+  inst: (pseudo_inst_macro
+      (dot_keyword_macro)
+      name: (symbol)
+      param: (symbol)
+      param: (symbol)
+      line: (source_line
+          inst: (actual_inst
+              opcode: (opcode_lda)
+              operand: (operand_imm
+                  expr: (number))))
+      (dot_keyword_endmacro))))

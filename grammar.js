@@ -323,7 +323,6 @@ module.exports = grammar({
         $.pseudo_inst_elseif,
         $.pseudo_inst_end,
         $.pseudo_inst_endif,
-        $.pseudo_inst_endmacro,
         $.pseudo_inst_endrepeat,
         $.pseudo_inst_enum,
         $.pseudo_inst_error,
@@ -607,9 +606,6 @@ module.exports = grammar({
 
     // .endif
     pseudo_inst_endif: ($) => $.dot_keyword_endif,
-
-    // .endmacro
-    pseudo_inst_endmacro: ($) => $.dot_keyword_endmacro,
 
     // .endrepeat
     pseudo_inst_endrepeat: ($) => $.dot_keyword_endrepeat,
@@ -980,12 +976,17 @@ module.exports = grammar({
         $.dot_keyword_macro,
         field("name", $.symbol),
         optional($._pseudo_inst_macro_params),
+        token(prec(1, /\r?\n/)),
+        optional($._pseudo_inst_macro_lines),
+        $.dot_keyword_endmacro,
       ),
     _pseudo_inst_macro_params: ($) =>
       seq(
         field("param", $.symbol),
         optional(seq(",", $._pseudo_inst_macro_params)),
       ),
+    _pseudo_inst_macro_lines: ($) =>
+      seq(field("line", $.source_line), optional($._pseudo_inst_macro_lines)),
 
     // .org
     pseudo_inst_org: ($) => seq($.dot_keyword_org, field("pc", $._expression)),

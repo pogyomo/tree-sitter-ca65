@@ -9961,21 +9961,6 @@
     }
   },
   {
-    "type": "pseudo_inst_endmacro",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "dot_keyword_endmacro",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "pseudo_inst_endrepeat",
     "named": true,
     "fields": {},
@@ -13425,6 +13410,16 @@
     "type": "pseudo_inst_macro",
     "named": true,
     "fields": {
+      "line": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "source_line",
+            "named": true
+          }
+        ]
+      },
       "name": {
         "multiple": false,
         "required": true,
@@ -13447,9 +13442,13 @@
       }
     },
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "dot_keyword_endmacro",
+          "named": true
+        },
         {
           "type": "dot_keyword_macro",
           "named": true
@@ -17055,10 +17054,6 @@
           },
           {
             "type": "pseudo_inst_endif",
-            "named": true
-          },
-          {
-            "type": "pseudo_inst_endmacro",
             "named": true
           },
           {
