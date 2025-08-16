@@ -1069,7 +1069,7 @@
     "fields": {
       "arg": {
         "multiple": true,
-        "required": true,
+        "required": false,
         "types": [
           {
             "type": "macro_inst_arg_enclosed",

@@ -269,8 +269,16 @@
           }
         },
         {
-          "type": "SYMBOL",
-          "name": "_macro_inst_args"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_macro_inst_args"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         }
       ]
     },

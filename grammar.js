@@ -103,7 +103,7 @@ module.exports = grammar({
 
     // Macro instruction
     macro_inst: ($) =>
-      seq(field("name", $.macro_inst_name), $._macro_inst_args),
+      seq(field("name", $.macro_inst_name), optional($._macro_inst_args)),
     macro_inst_name: ($) => prec(1, $._identifier), // Higher precedence than macro_call_name
     _macro_inst_args: ($) =>
       seq(
