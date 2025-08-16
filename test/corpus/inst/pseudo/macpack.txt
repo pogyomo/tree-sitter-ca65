@@ -6,10 +6,20 @@ MACPACK pseudo instruction
 .macpack cbm
 .macpack generic
 .macpack longbranch
+.macpack apple2
+.macpack module
 
 --------------------------------------------------
 
 (source
+ (source_line
+  inst: (pseudo_inst_macpack
+      (dot_keyword_macpack)
+      package: (pseudo_inst_macpack_package)))
+ (source_line
+  inst: (pseudo_inst_macpack
+      (dot_keyword_macpack)
+      package: (pseudo_inst_macpack_package)))
  (source_line
   inst: (pseudo_inst_macpack
       (dot_keyword_macpack)

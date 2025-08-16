@@ -17088,6 +17088,16 @@
           "type": "PATTERN",
           "value": "longbranch",
           "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "apple2",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "module",
+          "flags": "i"
         }
       ]
     },

@@ -1023,6 +1023,8 @@ module.exports = grammar({
         make_case_insentive("cbm"),
         make_case_insentive("generic"),
         make_case_insentive("longbranch"),
+        make_case_insentive("apple2"),
+        make_case_insentive("module"),
       ),
 
     // .macro
