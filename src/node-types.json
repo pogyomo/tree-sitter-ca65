@@ -6001,7 +6001,167 @@
         "required": true,
         "types": [
           {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "char",
+            "named": true
+          },
+          {
+            "type": "group_expression",
+            "named": true
+          },
+          {
+            "type": "local_label_literal",
+            "named": true
+          },
+          {
+            "type": "macro_call",
+            "named": true
+          },
+          {
+            "type": "member",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_addrsize",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_bank",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_bankbyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_blank",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_capability",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_concat",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_const",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_defined",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_definedmacro",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_hibyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_hiword",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_ident",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_ismnemonic",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_left",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_lobyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_loword",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_match",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_max",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_mid",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_min",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_referenced",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_right",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_sizeof",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_sprintf",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_start",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_string",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_strlen",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_tcount",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_xmatch",
+            "named": true
+          },
+          {
+            "type": "pseudo_var",
+            "named": true
+          },
+          {
             "type": "string",
+            "named": true
+          },
+          {
+            "type": "symbol",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
+            "named": true
+          },
+          {
+            "type": "unnamed_label_literal",
             "named": true
           }
         ]
@@ -7476,7 +7636,167 @@
         "required": true,
         "types": [
           {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "char",
+            "named": true
+          },
+          {
+            "type": "group_expression",
+            "named": true
+          },
+          {
+            "type": "local_label_literal",
+            "named": true
+          },
+          {
+            "type": "macro_call",
+            "named": true
+          },
+          {
+            "type": "member",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_addrsize",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_bank",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_bankbyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_blank",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_capability",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_concat",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_const",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_defined",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_definedmacro",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_hibyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_hiword",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_ident",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_ismnemonic",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_left",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_lobyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_loword",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_match",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_max",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_mid",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_min",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_referenced",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_right",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_sizeof",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_sprintf",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_start",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_string",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_strlen",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_tcount",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_xmatch",
+            "named": true
+          },
+          {
+            "type": "pseudo_var",
+            "named": true
+          },
+          {
             "type": "string",
+            "named": true
+          },
+          {
+            "type": "symbol",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
+            "named": true
+          },
+          {
+            "type": "unnamed_label_literal",
             "named": true
           }
         ]
@@ -7682,7 +8002,167 @@
         "required": false,
         "types": [
           {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "char",
+            "named": true
+          },
+          {
+            "type": "group_expression",
+            "named": true
+          },
+          {
+            "type": "local_label_literal",
+            "named": true
+          },
+          {
+            "type": "macro_call",
+            "named": true
+          },
+          {
+            "type": "member",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_addrsize",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_bank",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_bankbyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_blank",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_capability",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_concat",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_const",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_defined",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_definedmacro",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_hibyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_hiword",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_ident",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_ismnemonic",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_left",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_lobyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_loword",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_match",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_max",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_mid",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_min",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_referenced",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_right",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_sizeof",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_sprintf",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_start",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_string",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_strlen",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_tcount",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_xmatch",
+            "named": true
+          },
+          {
+            "type": "pseudo_var",
+            "named": true
+          },
+          {
             "type": "string",
+            "named": true
+          },
+          {
+            "type": "symbol",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
+            "named": true
+          },
+          {
+            "type": "unnamed_label_literal",
             "named": true
           }
         ]
@@ -10269,7 +10749,167 @@
         "required": true,
         "types": [
           {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "char",
+            "named": true
+          },
+          {
+            "type": "group_expression",
+            "named": true
+          },
+          {
+            "type": "local_label_literal",
+            "named": true
+          },
+          {
+            "type": "macro_call",
+            "named": true
+          },
+          {
+            "type": "member",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_addrsize",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_bank",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_bankbyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_blank",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_capability",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_concat",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_const",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_defined",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_definedmacro",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_hibyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_hiword",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_ident",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_ismnemonic",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_left",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_lobyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_loword",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_match",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_max",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_mid",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_min",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_referenced",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_right",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_sizeof",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_sprintf",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_start",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_string",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_strlen",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_tcount",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_xmatch",
+            "named": true
+          },
+          {
+            "type": "pseudo_var",
+            "named": true
+          },
+          {
             "type": "string",
+            "named": true
+          },
+          {
+            "type": "symbol",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
+            "named": true
+          },
+          {
+            "type": "unnamed_label_literal",
             "named": true
           }
         ]
@@ -10940,7 +11580,167 @@
         "required": true,
         "types": [
           {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "char",
+            "named": true
+          },
+          {
+            "type": "group_expression",
+            "named": true
+          },
+          {
+            "type": "local_label_literal",
+            "named": true
+          },
+          {
+            "type": "macro_call",
+            "named": true
+          },
+          {
+            "type": "member",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_addrsize",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_bank",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_bankbyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_blank",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_capability",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_concat",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_const",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_defined",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_definedmacro",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_hibyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_hiword",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_ident",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_ismnemonic",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_left",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_lobyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_loword",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_match",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_max",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_mid",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_min",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_referenced",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_right",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_sizeof",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_sprintf",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_start",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_string",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_strlen",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_tcount",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_xmatch",
+            "named": true
+          },
+          {
+            "type": "pseudo_var",
+            "named": true
+          },
+          {
             "type": "string",
+            "named": true
+          },
+          {
+            "type": "symbol",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
+            "named": true
+          },
+          {
+            "type": "unnamed_label_literal",
             "named": true
           }
         ]
@@ -11023,7 +11823,167 @@
         "required": true,
         "types": [
           {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "char",
+            "named": true
+          },
+          {
+            "type": "group_expression",
+            "named": true
+          },
+          {
+            "type": "local_label_literal",
+            "named": true
+          },
+          {
+            "type": "macro_call",
+            "named": true
+          },
+          {
+            "type": "member",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_addrsize",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_bank",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_bankbyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_blank",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_capability",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_concat",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_const",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_defined",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_definedmacro",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_hibyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_hiword",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_ident",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_ismnemonic",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_left",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_lobyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_loword",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_match",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_max",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_mid",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_min",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_referenced",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_right",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_sizeof",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_sprintf",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_start",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_string",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_strlen",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_tcount",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_xmatch",
+            "named": true
+          },
+          {
+            "type": "pseudo_var",
+            "named": true
+          },
+          {
             "type": "string",
+            "named": true
+          },
+          {
+            "type": "symbol",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
+            "named": true
+          },
+          {
+            "type": "unnamed_label_literal",
             "named": true
           }
         ]
@@ -12812,7 +13772,167 @@
         "required": true,
         "types": [
           {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "char",
+            "named": true
+          },
+          {
+            "type": "group_expression",
+            "named": true
+          },
+          {
+            "type": "local_label_literal",
+            "named": true
+          },
+          {
+            "type": "macro_call",
+            "named": true
+          },
+          {
+            "type": "member",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_addrsize",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_bank",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_bankbyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_blank",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_capability",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_concat",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_const",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_defined",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_definedmacro",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_hibyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_hiword",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_ident",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_ismnemonic",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_left",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_lobyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_loword",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_match",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_max",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_mid",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_min",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_referenced",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_right",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_sizeof",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_sprintf",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_start",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_string",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_strlen",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_tcount",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_xmatch",
+            "named": true
+          },
+          {
+            "type": "pseudo_var",
+            "named": true
+          },
+          {
             "type": "string",
+            "named": true
+          },
+          {
+            "type": "symbol",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
+            "named": true
+          },
+          {
+            "type": "unnamed_label_literal",
             "named": true
           }
         ]
@@ -13178,7 +14298,167 @@
         "required": true,
         "types": [
           {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "char",
+            "named": true
+          },
+          {
+            "type": "group_expression",
+            "named": true
+          },
+          {
+            "type": "local_label_literal",
+            "named": true
+          },
+          {
+            "type": "macro_call",
+            "named": true
+          },
+          {
+            "type": "member",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_addrsize",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_bank",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_bankbyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_blank",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_capability",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_concat",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_const",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_defined",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_definedmacro",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_hibyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_hiword",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_ident",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_ismnemonic",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_left",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_lobyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_loword",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_match",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_max",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_mid",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_min",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_referenced",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_right",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_sizeof",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_sprintf",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_start",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_string",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_strlen",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_tcount",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_xmatch",
+            "named": true
+          },
+          {
+            "type": "pseudo_var",
+            "named": true
+          },
+          {
             "type": "string",
+            "named": true
+          },
+          {
+            "type": "symbol",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
+            "named": true
+          },
+          {
+            "type": "unnamed_label_literal",
             "named": true
           }
         ]
@@ -14312,7 +15592,167 @@
         "required": true,
         "types": [
           {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "char",
+            "named": true
+          },
+          {
+            "type": "group_expression",
+            "named": true
+          },
+          {
+            "type": "local_label_literal",
+            "named": true
+          },
+          {
+            "type": "macro_call",
+            "named": true
+          },
+          {
+            "type": "member",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_addrsize",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_bank",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_bankbyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_blank",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_capability",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_concat",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_const",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_defined",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_definedmacro",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_hibyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_hiword",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_ident",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_ismnemonic",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_left",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_lobyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_loword",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_match",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_max",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_mid",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_min",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_referenced",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_right",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_sizeof",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_sprintf",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_start",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_string",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_strlen",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_tcount",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_xmatch",
+            "named": true
+          },
+          {
+            "type": "pseudo_var",
+            "named": true
+          },
+          {
             "type": "string",
+            "named": true
+          },
+          {
+            "type": "symbol",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
+            "named": true
+          },
+          {
+            "type": "unnamed_label_literal",
             "named": true
           }
         ]
@@ -15567,7 +17007,167 @@
         "required": true,
         "types": [
           {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "char",
+            "named": true
+          },
+          {
+            "type": "group_expression",
+            "named": true
+          },
+          {
+            "type": "local_label_literal",
+            "named": true
+          },
+          {
+            "type": "macro_call",
+            "named": true
+          },
+          {
+            "type": "member",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_addrsize",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_bank",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_bankbyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_blank",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_capability",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_concat",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_const",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_defined",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_definedmacro",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_hibyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_hiword",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_ident",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_ismnemonic",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_left",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_lobyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_loword",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_match",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_max",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_mid",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_min",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_referenced",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_right",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_sizeof",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_sprintf",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_start",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_string",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_strlen",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_tcount",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_xmatch",
+            "named": true
+          },
+          {
+            "type": "pseudo_var",
+            "named": true
+          },
+          {
             "type": "string",
+            "named": true
+          },
+          {
+            "type": "symbol",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
+            "named": true
+          },
+          {
+            "type": "unnamed_label_literal",
             "named": true
           }
         ]
@@ -15603,7 +17203,167 @@
         "required": true,
         "types": [
           {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "char",
+            "named": true
+          },
+          {
+            "type": "group_expression",
+            "named": true
+          },
+          {
+            "type": "local_label_literal",
+            "named": true
+          },
+          {
+            "type": "macro_call",
+            "named": true
+          },
+          {
+            "type": "member",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_addrsize",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_bank",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_bankbyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_blank",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_capability",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_concat",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_const",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_defined",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_definedmacro",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_hibyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_hiword",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_ident",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_ismnemonic",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_left",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_lobyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_loword",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_match",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_max",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_mid",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_min",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_referenced",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_right",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_sizeof",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_sprintf",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_start",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_string",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_strlen",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_tcount",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_xmatch",
+            "named": true
+          },
+          {
+            "type": "pseudo_var",
+            "named": true
+          },
+          {
             "type": "string",
+            "named": true
+          },
+          {
+            "type": "symbol",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
+            "named": true
+          },
+          {
+            "type": "unnamed_label_literal",
             "named": true
           }
         ]
@@ -17367,7 +19127,167 @@
         "required": true,
         "types": [
           {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "char",
+            "named": true
+          },
+          {
+            "type": "group_expression",
+            "named": true
+          },
+          {
+            "type": "local_label_literal",
+            "named": true
+          },
+          {
+            "type": "macro_call",
+            "named": true
+          },
+          {
+            "type": "member",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_addrsize",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_bank",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_bankbyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_blank",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_capability",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_concat",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_const",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_defined",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_definedmacro",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_hibyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_hiword",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_ident",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_ismnemonic",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_left",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_lobyte",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_loword",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_match",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_max",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_mid",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_min",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_referenced",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_right",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_sizeof",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_sprintf",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_start",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_string",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_strlen",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_tcount",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_xmatch",
+            "named": true
+          },
+          {
+            "type": "pseudo_var",
+            "named": true
+          },
+          {
             "type": "string",
+            "named": true
+          },
+          {
+            "type": "symbol",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
+            "named": true
+          },
+          {
+            "type": "unnamed_label_literal",
             "named": true
           }
         ]

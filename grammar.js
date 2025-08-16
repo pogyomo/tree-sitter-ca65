@@ -436,7 +436,7 @@ module.exports = grammar({
 
     // .asciiz
     pseudo_inst_asciiz: ($) =>
-      seq($.dot_keyword_asciiz, field("value", $.string)),
+      seq($.dot_keyword_asciiz, field("value", $._expression)),
 
     // .assert
     pseudo_inst_assert: ($) =>
@@ -451,7 +451,7 @@ module.exports = grammar({
         field("action", $.pseudo_inst_assert_action),
         optional(seq(",", $._pseudo_inst_assert_arg3)),
       ),
-    _pseudo_inst_assert_arg3: ($) => field("message", $.string),
+    _pseudo_inst_assert_arg3: ($) => field("message", $._expression),
     pseudo_inst_assert_action: (_) =>
       choice(
         make_case_insentive("warning"),
@@ -618,7 +618,7 @@ module.exports = grammar({
 
     // .error
     pseudo_inst_error: ($) =>
-      seq($.dot_keyword_error, field("message", $.string)),
+      seq($.dot_keyword_error, field("message", $._expression)),
 
     // .exitmacro
     pseudo_inst_exitmacro: ($) => $.dot_keyword_exitmacro,
@@ -672,7 +672,7 @@ module.exports = grammar({
 
     // .fatal
     pseudo_inst_fatal: ($) =>
-      seq($.dot_keyword_fatal, field("message", $.string)),
+      seq($.dot_keyword_fatal, field("message", $._expression)),
 
     // .feature
     pseudo_inst_feature: ($) =>
@@ -715,7 +715,7 @@ module.exports = grammar({
         $.dot_keyword_fileopt,
         field("name", $.pseudo_inst_fileopt_name),
         ",",
-        field("content", $.string),
+        field("content", $._expression),
       ),
     pseudo_inst_fileopt_name: (_) =>
       choice(
@@ -947,7 +947,7 @@ module.exports = grammar({
     pseudo_inst_incbin: ($) =>
       seq(
         $.dot_keyword_incbin,
-        field("file", $.string),
+        field("file", $._expression),
         optional(seq(",", $._pseudo_inst_incbin_arg1)),
       ),
     _pseudo_inst_incbin_arg1: ($) =>
@@ -959,7 +959,7 @@ module.exports = grammar({
 
     // .include
     pseudo_inst_include: ($) =>
-      seq($.dot_keyword_include, field("file", $.string)),
+      seq($.dot_keyword_include, field("file", $._expression)),
 
     // .interruptor
     pseudo_inst_interruptor: ($) =>
@@ -1047,7 +1047,8 @@ module.exports = grammar({
     pseudo_inst_org: ($) => seq($.dot_keyword_org, field("pc", $._expression)),
 
     // .out
-    pseudo_inst_out: ($) => seq($.dot_keyword_out, field("message", $.string)),
+    pseudo_inst_out: ($) =>
+      seq($.dot_keyword_out, field("message", $._expression)),
 
     // .p02
     pseudo_inst_p02: ($) => $.dot_keyword_p02,
@@ -1175,13 +1176,13 @@ module.exports = grammar({
     pseudo_inst_segment: ($) =>
       seq(
         $.dot_keyword_segment,
-        field("name", $.string),
+        field("name", $._expression),
         optional(seq(":", field("spec", $.pseudo_inst_addr_spec))),
       ),
 
     // .setcpu
     pseudo_inst_setcpu: ($) =>
-      seq($.dot_keyword_setcpu, field("cpu", $.string)),
+      seq($.dot_keyword_setcpu, field("cpu", $._expression)),
 
     // .smart
     pseudo_inst_smart: ($) =>
@@ -1216,7 +1217,7 @@ module.exports = grammar({
 
     // .warning
     pseudo_inst_warning: ($) =>
-      seq($.dot_keyword_warning, field("message", $.string)),
+      seq($.dot_keyword_warning, field("message", $._expression)),
 
     // .word
     pseudo_inst_word: ($) => seq($.dot_keyword_word, $._pseudo_inst_word_args),
@@ -1661,7 +1662,7 @@ module.exports = grammar({
       seq(
         $.dot_keyword_sprintf,
         "(",
-        field("fmt", $.string),
+        field("fmt", $._expression),
         optional(seq(",", $._pseudo_func_sprintf_args)),
         ")",
       ),
