@@ -3921,11 +3921,19 @@
         "required": true,
         "types": [
           {
+            "type": "pseudo_func_left",
+            "named": true
+          },
+          {
             "type": "pseudo_func_left_tokens_enclosed",
             "named": true
           },
           {
             "type": "pseudo_func_left_tokens_raw",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_right",
             "named": true
           },
           {
@@ -4341,11 +4349,19 @@
         "required": true,
         "types": [
           {
+            "type": "pseudo_func_left",
+            "named": true
+          },
+          {
             "type": "pseudo_func_match_lhs_enclosed",
             "named": true
           },
           {
             "type": "pseudo_func_match_lhs_raw",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_right",
             "named": true
           },
           {
@@ -4363,11 +4379,19 @@
         "required": true,
         "types": [
           {
+            "type": "pseudo_func_left",
+            "named": true
+          },
+          {
             "type": "pseudo_func_match_rhs_enclosed",
             "named": true
           },
           {
             "type": "pseudo_func_match_rhs_raw",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_right",
             "named": true
           },
           {
@@ -5717,6 +5741,14 @@
         "required": true,
         "types": [
           {
+            "type": "pseudo_func_left",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_right",
+            "named": true
+          },
+          {
             "type": "pseudo_func_right_tokens_enclosed",
             "named": true
           },
@@ -6771,6 +6803,14 @@
         "required": true,
         "types": [
           {
+            "type": "pseudo_func_left",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_right",
+            "named": true
+          },
+          {
             "type": "pseudo_func_xmatch_lhs_enclosed",
             "named": true
           },
@@ -6792,6 +6832,14 @@
         "multiple": true,
         "required": true,
         "types": [
+          {
+            "type": "pseudo_func_left",
+            "named": true
+          },
+          {
+            "type": "pseudo_func_right",
+            "named": true
+          },
           {
             "type": "pseudo_func_xmatch_rhs_enclosed",
             "named": true

@@ -1476,7 +1476,9 @@ module.exports = grammar({
       ),
     _pseudo_func_left_tokens: ($) =>
       choice(
-        prec(1, seq("{", $.pseudo_func_left_tokens_enclosed, "}")),
+        $.pseudo_func_left,
+        $.pseudo_func_right,
+        seq("{", $.pseudo_func_left_tokens_enclosed, "}"),
         $.pseudo_func_left_tokens_raw,
       ),
     pseudo_func_left_tokens_enclosed: (_) => token(prec(-1, /[^\}]*/)),
@@ -1502,6 +1504,8 @@ module.exports = grammar({
       ),
     _pseudo_func_match_lhs: ($) =>
       choice(
+        $.pseudo_func_left,
+        $.pseudo_func_right,
         $.pseudo_func_match_lhs_raw,
         seq("{", $.pseudo_func_match_lhs_enclosed, "}"),
       ),
@@ -1509,6 +1513,8 @@ module.exports = grammar({
     pseudo_func_match_lhs_enclosed: (_) => token(prec(-1, /[^}]*/)),
     _pseudo_func_match_rhs: ($) =>
       choice(
+        $.pseudo_func_left,
+        $.pseudo_func_right,
         $.pseudo_func_match_rhs_raw,
         seq("{", $.pseudo_func_match_rhs_enclosed, "}"),
       ),
@@ -1573,7 +1579,9 @@ module.exports = grammar({
       ),
     _pseudo_func_right_tokens: ($) =>
       choice(
-        prec(1, seq("{", $.pseudo_func_right_tokens_enclosed, "}")),
+        $.pseudo_func_left,
+        $.pseudo_func_right,
+        seq("{", $.pseudo_func_right_tokens_enclosed, "}"),
         $.pseudo_func_right_tokens_raw,
       ),
     pseudo_func_right_tokens_enclosed: (_) => token(prec(-1, /[^\}]*/)),
@@ -1650,6 +1658,8 @@ module.exports = grammar({
       ),
     _pseudo_func_xmatch_lhs: ($) =>
       choice(
+        $.pseudo_func_left,
+        $.pseudo_func_right,
         $.pseudo_func_xmatch_lhs_raw,
         seq("{", $.pseudo_func_xmatch_lhs_enclosed, "}"),
       ),
@@ -1657,6 +1667,8 @@ module.exports = grammar({
     pseudo_func_xmatch_lhs_enclosed: (_) => token(prec(-1, /[^}]*/)),
     _pseudo_func_xmatch_rhs: ($) =>
       choice(
+        $.pseudo_func_left,
+        $.pseudo_func_right,
         $.pseudo_func_xmatch_rhs_raw,
         seq("{", $.pseudo_func_xmatch_rhs_enclosed, "}"),
       ),

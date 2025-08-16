@@ -4,6 +4,7 @@ RIGHT pseudo function
 
 name = .right(1, 1 + 2)
 name = .right(1, {)})
+name = .right(1, .right(1, 1 + 2))
 
 --------------------------------------------------
 
@@ -21,4 +22,14 @@ name = .right(1, {)})
       expr: (pseudo_func_right
           (dot_keyword_right)
           count: (number)
-          tokens: (pseudo_func_right_tokens_enclosed)))))
+          tokens: (pseudo_func_right_tokens_enclosed))))
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_right
+          (dot_keyword_right)
+          count: (number)
+          tokens: (pseudo_func_right
+              (dot_keyword_right)
+              count: (number)
+              tokens: (pseudo_func_right_tokens_raw))))))

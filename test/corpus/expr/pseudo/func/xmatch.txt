@@ -4,6 +4,7 @@ XMATCH pseudo function
 
 name = .xmatch(1 + 2, 1 + 2)
 name = .xmatch({,}, {)})
+name = .xmatch(.left(1, 1 + 1), .right(1, 1 + 1))
 
 --------------------------------------------------
 
@@ -21,4 +22,17 @@ name = .xmatch({,}, {)})
       expr: (pseudo_func_xmatch
           (dot_keyword_xmatch)
           lhs: (pseudo_func_xmatch_lhs_enclosed)
-          rhs: (pseudo_func_xmatch_rhs_enclosed)))))
+          rhs: (pseudo_func_xmatch_rhs_enclosed))))
+ (source_line
+  symbol: (symbol_eq
+      name: (symbol)
+      expr: (pseudo_func_xmatch
+          (dot_keyword_xmatch)
+          lhs: (pseudo_func_left
+              (dot_keyword_left)
+              count: (number)
+              tokens: (pseudo_func_left_tokens_raw))
+          rhs: (pseudo_func_right
+              (dot_keyword_right)
+              count: (number)
+              tokens: (pseudo_func_right_tokens_raw))))))
