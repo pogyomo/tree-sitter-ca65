@@ -1234,7 +1234,6 @@ module.exports = grammar({
     _pseudo_inst_struct_or_union_fields: ($) =>
       seq(
         field("field", $.pseudo_inst_struct_or_union_field),
-        // choice(token(/\r?\n/), token.immediate(/\r?\n/)),
         token(prec(1, /\r?\n/)),
         optional($._pseudo_inst_struct_or_union_fields),
       ),
